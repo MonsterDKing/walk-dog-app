@@ -28,7 +28,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> implements Onboardi
 
   @override
   signUp() {
-    // TODO: implement signUp
-    throw UnimplementedError();
+    context.router.push(SignInScreen());
   }
 }

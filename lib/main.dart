@@ -13,7 +13,7 @@ import 'package:walk_dog_app/app/blocs/language_cubit.dart';
 void main() async {
   runApp(MultiBlocProvider(
     providers: [
-      BlocProvider(create: (context) => LanguageCubit()),
+      BlocProvider(create: (context) => LanguageCubit()..getCurrentLanguage()),
     ],
     child: const DogWalkingApp(),
   ));

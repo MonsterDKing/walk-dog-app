@@ -5,6 +5,6 @@ Map<String, String> english() {
     'onboardingButton': 'Get Started',
     'joinOurCommunity': 'Join our community',
     'alreadyAMember': 'Already a member?',
-    'signInNow': 'Sign in in',
+    'signInNow': 'Sign in now',
   };
 }
