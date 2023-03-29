@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:walk_dog_app/locale/locale.dart';
@@ -30,6 +31,10 @@ class _DogWalkingAppState extends State<DogWalkingApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp.router(
       localizationsDelegates: const [
         AppLocalizationsDelegate(),
