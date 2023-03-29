@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:walk_dog_app/assets/assets.dart';
+import 'package:walk_dog_app/app/assets/assets.dart';
 import 'package:walk_dog_app/locale/locale.dart';
-import 'package:walk_dog_app/app/onboarding/onboarding_interactor.dart';
+import 'package:walk_dog_app/app/feature/onboarding/onboarding_interactor.dart';
 
 class OnboardingUI extends StatelessWidget {
   const OnboardingUI({super.key, required this.interactor});

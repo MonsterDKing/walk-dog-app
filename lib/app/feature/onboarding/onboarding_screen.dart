@@ -1,10 +1,12 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:walk_dog_app/app/onboarding/onboarding_interactor.dart';
-import 'package:walk_dog_app/app/onboarding/onboarding_ui.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:walk_dog_app/app/feature/onboarding/onboarding_interactor.dart';
+import 'package:walk_dog_app/app/feature/onboarding/onboarding_ui.dart';
+
+import 'package:walk_dog_app/routes/router.gr.dart';
 
 @RoutePage(
-  name: 'onboardingscreen',
+  name: 'OnBoardingScreen',
 )
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -20,8 +22,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> implements Onboardi
   }
 
   @override
-  Future<void> saveOnboardingStatus() {
-    // TODO: implement saveOnboardingStatus
+  signIn() {
+    context.router.push(SignInScreen());
+  }
+
+  @override
+  signUp() {
+    // TODO: implement signUp
     throw UnimplementedError();
   }
 }

@@ -1,3 +1,4 @@
 abstract class OnboardingInteractor {
-  Future<void> saveOnboardingStatus();
+  signIn() {}
+  signUp() {}
 }

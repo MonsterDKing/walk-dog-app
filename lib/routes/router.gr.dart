@@ -8,34 +8,57 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:flutter/material.dart' as _i3;
-import 'package:walk_dog_app/app/onboarding/onboarding_screen.dart' as _i1;
+import 'package:auto_route/auto_route.dart' as _i3;
+import 'package:flutter/material.dart' as _i4;
+import 'package:walk_dog_app/app/feature/onboarding/onboarding_screen.dart'
+    as _i1;
+import 'package:walk_dog_app/app/feature/signIn/sign_in_screen.dart' as _i2;
 
-abstract class $AppRouter extends _i2.RootStackRouter {
-  $AppRouter([_i3.GlobalKey<_i3.NavigatorState>? navigatorKey]) : super(navigatorKey);
+abstract class $AppRouter extends _i3.RootStackRouter {
+  $AppRouter([_i4.GlobalKey<_i4.NavigatorState>? navigatorKey])
+      : super(navigatorKey);
 
   @override
-  final Map<String, _i2.PageFactory> pagesMap = {
-    Onboardingscreen.name: (routeData) {
-      return _i2.AutoRoutePage<dynamic>(
+  final Map<String, _i3.PageFactory> pagesMap = {
+    OnBoardingScreen.name: (routeData) {
+      return _i3.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.OnboardingScreen(),
       );
-    }
+    },
+    SignInScreen.name: (routeData) {
+      return _i3.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i2.SignInScreen(),
+      );
+    },
   };
 }
 
 /// generated route for
 /// [_i1.OnboardingScreen]
-class Onboardingscreen extends _i2.PageRouteInfo<void> {
-  const Onboardingscreen({List<_i2.PageRouteInfo>? children})
+class OnBoardingScreen extends _i3.PageRouteInfo<void> {
+  const OnBoardingScreen({List<_i3.PageRouteInfo>? children})
       : super(
-          Onboardingscreen.name,
+          OnBoardingScreen.name,
           initialChildren: children,
         );
 
-  static const String name = 'Onboardingscreen';
+  static const String name = 'OnBoardingScreen';
 
-  static const _i2.PageInfo<void> page = _i2.PageInfo<void>(name);
+  static const _i3.PageInfo<void> page = _i3.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.SignInScreen]
+class SignInScreen extends _i3.PageRouteInfo<void> {
+  const SignInScreen({List<_i3.PageRouteInfo>? children})
+      : super(
+          SignInScreen.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SignInScreen';
+
+  static const _i3.PageInfo<void> page = _i3.PageInfo<void>(name);
 }
