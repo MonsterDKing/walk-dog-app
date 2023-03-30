@@ -24,4 +24,26 @@ class _SignInScreenState extends State<SignInScreen> implements SignInInteractor
     // TODO: implement signInWithGoogle
     throw UnimplementedError();
   }
+
+  @override
+  void privacyPolicy() {
+    // TODO: implement privacyPolicy
+  }
+
+  @override
+  Future<void> signIn() {
+    // TODO: implement signIn
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> signInWithFacebook() {
+    // TODO: implement signInWithFacebook
+    throw UnimplementedError();
+  }
+
+  @override
+  void termsAndCondition() {
+    // TODO: implement termsAndCondition
+  }
 }

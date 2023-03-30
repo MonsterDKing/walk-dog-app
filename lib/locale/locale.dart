@@ -41,6 +41,40 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['alreadyAMember'];
   }
 
+  //signup
+
+  String? get titleSignUp {
+    return _localizedValues[locale.languageCode]!['titleSignUp'];
+  }
+
+  String? get subtitleSignUp {
+    return _localizedValues[locale.languageCode]!['subtitleSignUp'];
+  }
+
+  String? get signUpButton {
+    return _localizedValues[locale.languageCode]!['signUpButton'];
+  }
+
+  String? get connectWithFacebook {
+    return _localizedValues[locale.languageCode]!['connectWithFacebook'];
+  }
+
+  String? get connectWithGoogle {
+    return _localizedValues[locale.languageCode]!['connectWithGoogle'];
+  }
+
+  String? get fullName {
+    return _localizedValues[locale.languageCode]!['fullName'];
+  }
+
+  String? get phone {
+    return _localizedValues[locale.languageCode]!['phone'];
+  }
+
+  String? get passsword {
+    return _localizedValues[locale.languageCode]!['passsword'];
+  }
+
   static List<Locale> getSupportedLocales() {
     List<Locale> toReturn = [];
     for (String langCode in AppConfig.languagesSupported.keys) {
