@@ -15,5 +15,15 @@ Map<String, String> english() {
     'fullName': 'Full name',
     'phone': 'Cell phone',
     'passsword': 'Password',
+    //home
+    'homeTitle': 'Home',
+    'homeSubtitle': 'Explore dog walkers',
+    'nearYou': 'Near you',
+    'viewAll': 'View all',
+    //menu
+    'homeMenu': 'Home',
+    'homeMoments': 'Moments',
+    'homeChat': 'Chat',
+    'homeProfile': 'Profile',
   };
 }

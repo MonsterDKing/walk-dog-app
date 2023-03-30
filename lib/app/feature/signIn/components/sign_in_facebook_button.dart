@@ -15,23 +15,24 @@ class FacebookButtonSignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      onPressed: () {
-        // Acción a realizar cuando se presiona el botón
-      },
-      minWidth: 343,
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
-      ),
-      color: Colors.transparent,
+    return Center(
       child: Container(
-          // color #3B5998
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(14)),
-            color: Color(0xFF3B5998),
+        height: 60,
+        width: 343,
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(14)),
+          color: Color(0xFF3B5998),
+        ),
+        child: MaterialButton(
+          onPressed: () {
+            interactor.signInWithFacebook();
+          },
+          minWidth: 343,
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
           ),
-          height: 60,
+          color: Colors.transparent,
           child: Row(
             children: [
               Container(
@@ -53,7 +54,9 @@ class FacebookButtonSignUp extends StatelessWidget {
                 ),
               )
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }

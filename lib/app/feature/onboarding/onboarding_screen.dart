@@ -6,7 +6,7 @@ import 'package:walk_dog_app/app/feature/onboarding/onboarding_ui.dart';
 import 'package:walk_dog_app/routes/router.gr.dart';
 
 @RoutePage(
-  name: 'OnBoardingScreen',
+  name: 'OnboardingScreen',
 )
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

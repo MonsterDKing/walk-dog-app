@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:walk_dog_app/app/feature/signIn/sign_in_interactor.dart';
 import 'package:walk_dog_app/app/feature/signIn/sign_in_ui.dart';
+import 'package:walk_dog_app/routes/router.gr.dart';
 
 @RoutePage(
-  name: 'signInScreen',
+  name: 'SignInScreen',
 )
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -20,9 +21,8 @@ class _SignInScreenState extends State<SignInScreen> implements SignInInteractor
   }
 
   @override
-  Future<void> signInWithGoogle() {
-    // TODO: implement signInWithGoogle
-    throw UnimplementedError();
+  Future<void> signInWithGoogle() async {
+    context.router.push(const TabsScreen());
   }
 
   @override
@@ -31,19 +31,17 @@ class _SignInScreenState extends State<SignInScreen> implements SignInInteractor
   }
 
   @override
-  Future<void> signIn() {
-    // TODO: implement signIn
-    throw UnimplementedError();
+  Future<void> signIn() async {
+    context.router.push(const TabsScreen());
   }
 
   @override
-  Future<void> signInWithFacebook() {
-    // TODO: implement signInWithFacebook
-    throw UnimplementedError();
+  Future<void> signInWithFacebook() async {
+    context.router.push(const TabsScreen());
   }
 
   @override
   void termsAndCondition() {
-    // TODO: implement termsAndCondition
+    context.router.push(const TabsScreen());
   }
 }

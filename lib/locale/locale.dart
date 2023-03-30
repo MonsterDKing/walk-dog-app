@@ -75,6 +75,38 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['passsword'];
   }
 
+  String? get homeTitle {
+    return _localizedValues[locale.languageCode]!['homeTitle'];
+  }
+
+  String? get homeSubtitle {
+    return _localizedValues[locale.languageCode]!['homeSubtitle'];
+  }
+
+  String? get nearYou {
+    return _localizedValues[locale.languageCode]!['nearYou'];
+  }
+
+  String? get viewAll {
+    return _localizedValues[locale.languageCode]!['viewAll'];
+  }
+
+  String? get homeMenu {
+    return _localizedValues[locale.languageCode]!['homeMenu'];
+  }
+
+  String? get homeMoments {
+    return _localizedValues[locale.languageCode]!['homeMoments'];
+  }
+
+  String? get homeChat {
+    return _localizedValues[locale.languageCode]!['homeChat'];
+  }
+
+  String? get homeProfile {
+    return _localizedValues[locale.languageCode]!['homeProfile'];
+  }
+
   static List<Locale> getSupportedLocales() {
     List<Locale> toReturn = [];
     for (String langCode in AppConfig.languagesSupported.keys) {

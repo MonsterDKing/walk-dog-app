@@ -7,8 +7,11 @@ class AppRouter extends $AppRouter {
   final List<AutoRoute> routes = [
     AutoRoute(
       path: '/',
-      page: OnBoardingScreen.page,
+      page: OnboardingScreen.page,
     ),
-    AutoRoute(page: SignInScreen.page)
+    AutoRoute(page: SignInScreen.page),
+    AutoRoute(page: TabsScreen.page, children: [
+      AutoRoute(page: HomeScreen.page),
+    ])
   ];
 }

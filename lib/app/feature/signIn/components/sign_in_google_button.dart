@@ -16,21 +16,23 @@ class GoogleButtonSignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      onPressed: () {
-        // Acción a realizar cuando se presiona el botón
-      },
-      minWidth: 343,
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
-      ),
+    return Center(
       child: Container(
-          decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(14)),
-              color: Colors.white,
-              border: Border.all(color: Colors.black)),
-          height: 60,
+        height: 60,
+        width: 343,
+        decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(14)),
+            color: Colors.white,
+            border: Border.all(color: Colors.black)),
+        child: MaterialButton(
+          onPressed: () {
+            interactor.signInWithGoogle();
+          },
+          minWidth: 343,
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
           child: Row(
             children: [
               Container(margin: const EdgeInsets.only(left: 20), child: Image.asset(Assets.googleIconImage)),
@@ -47,7 +49,9 @@ class GoogleButtonSignUp extends StatelessWidget {
                 ),
               )
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }

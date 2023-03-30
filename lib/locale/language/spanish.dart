@@ -15,5 +15,15 @@ Map<String, String> spanish() {
     'fullName': 'Nombre completo',
     'phone': 'Celular',
     'passsword': 'Contraseña',
+    //home
+    'homeTitle': 'Inicio',
+    'homeSubtitle': 'Explora paseadores de perros',
+    'nearYou': 'Cerca de ti',
+    'viewAll': 'Ver todo',
+    //menu
+    'homeMenu': 'Inicio',
+    'homeMoments': 'Momentos',
+    'homeChat': 'Chat',
+    'homeProfile': 'Perfil',
   };
 }
