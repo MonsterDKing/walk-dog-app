@@ -1,10 +1,3 @@
-import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:walk_dog_app/core/common/constants/colors.dart';
-import 'package:intl/intl.dart';
-
 class Utils {
   Utils();
 

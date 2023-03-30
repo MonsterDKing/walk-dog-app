@@ -20,6 +20,8 @@ Map<String, String> spanish() {
     'homeSubtitle': 'Explora paseadores de perros',
     'nearYou': 'Cerca de ti',
     'viewAll': 'Ver todo',
+    'homenearYou': 'Cerca de ti',
+    'homeSuggested': 'Sugeridos',
     //menu
     'homeMenu': 'Inicio',
     'homeMoments': 'Momentos',

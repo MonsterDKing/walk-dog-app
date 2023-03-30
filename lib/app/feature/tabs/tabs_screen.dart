@@ -14,7 +14,7 @@ class TabsScreen extends StatelessWidget {
     return AutoTabsScaffold(
       routes: const [
         HomeScreen(),
-        HomeScreen(),
+        MomentsScreen(),
         HomeScreen(),
         HomeScreen(),
       ],

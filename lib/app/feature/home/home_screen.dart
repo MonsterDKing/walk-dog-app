@@ -17,6 +17,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> implements HomeInteractor {
   @override
   Widget build(BuildContext context) {
-    return HomeUi(interactor: this);
+    return HomeUI(interactor: this);
   }
 }

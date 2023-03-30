@@ -20,6 +20,8 @@ Map<String, String> english() {
     'homeSubtitle': 'Explore dog walkers',
     'nearYou': 'Near you',
     'viewAll': 'View all',
+    'homeNearYou': 'Near you',
+    'homeSuggested': 'Suggested',
     //menu
     'homeMenu': 'Home',
     'homeMoments': 'Moments',

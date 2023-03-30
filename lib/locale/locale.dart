@@ -107,6 +107,14 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['homeProfile'];
   }
 
+  String? get homeNearYou {
+    return _localizedValues[locale.languageCode]!['homeNearYou'];
+  }
+
+  String? get homeSuggested {
+    return _localizedValues[locale.languageCode]!['homeSuggested'];
+  }
+
   static List<Locale> getSupportedLocales() {
     List<Locale> toReturn = [];
     for (String langCode in AppConfig.languagesSupported.keys) {
