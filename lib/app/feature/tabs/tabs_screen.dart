@@ -16,7 +16,7 @@ class TabsScreen extends StatelessWidget {
         HomeScreen(),
         MomentsScreen(),
         ChatScreen(),
-        HomeScreen(),
+        ProfileScreen(),
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return BottomNavigationBar(

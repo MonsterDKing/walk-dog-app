@@ -14,6 +14,7 @@ class AppRouter extends $AppRouter {
       AutoRoute(page: HomeScreen.page),
       AutoRoute(page: MomentsScreen.page),
       AutoRoute(page: ChatScreen.page),
+      AutoRoute(page: ProfileScreen.page),
     ]),
     AutoRoute(page: MomentsStoryView.page),
   ];
