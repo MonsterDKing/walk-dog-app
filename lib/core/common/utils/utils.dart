@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Utils {
   Utils();
 
@@ -7,5 +9,13 @@ class Utils {
     } catch (e) {
       return 'Parece que algo anda mal, intenta mas tarde';
     }
+  }
+
+  //utils develop
+
+  //generate function to return a randoom image to pichsum
+  //https://picsum.photos/200/300
+  static String generateRandomImage() {
+    return "https://picsum.photos/200/300?random=${Random().nextInt(100)}";
   }
 }

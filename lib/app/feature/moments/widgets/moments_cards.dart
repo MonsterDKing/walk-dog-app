@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:walk_dog_app/core/common/utils/utils.dart';
 
 class MomentsCardsWidget extends StatelessWidget {
   const MomentsCardsWidget({super.key});
@@ -13,7 +14,7 @@ class MomentsCardsWidget extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(8),
           child: Image.network(
-            generateRandomImage(),
+            Utils.generateRandomImage(),
             fit: BoxFit.cover,
           ),
         ),
@@ -73,11 +74,5 @@ class MomentsCardsWidget extends StatelessWidget {
         )
       ],
     );
-  }
-
-  //generate function to return a randoom image to pichsum
-  //https://picsum.photos/200/300
-  String generateRandomImage() {
-    return "https://picsum.photos/200/300?random=${Random().nextInt(100)}";
   }
 }

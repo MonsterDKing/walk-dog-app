@@ -15,7 +15,7 @@ class TabsScreen extends StatelessWidget {
       routes: const [
         HomeScreen(),
         MomentsScreen(),
-        HomeScreen(),
+        ChatScreen(),
         HomeScreen(),
       ],
       bottomNavigationBuilder: (_, tabsRouter) {

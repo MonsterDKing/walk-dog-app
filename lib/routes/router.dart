@@ -13,7 +13,8 @@ class AppRouter extends $AppRouter {
     AutoRoute(page: TabsScreen.page, children: [
       AutoRoute(page: HomeScreen.page),
       AutoRoute(page: MomentsScreen.page),
-      AutoRoute(page: MomentsStoryView.page),
-    ])
+      AutoRoute(page: ChatScreen.page),
+    ]),
+    AutoRoute(page: MomentsStoryView.page),
   ];
 }

@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:walk_dog_app/routes/router.gr.dart';
+import 'package:walk_dog_app/core/common/utils/utils.dart';
 
 class StoryWidget extends StatelessWidget {
   const StoryWidget({Key? key}) : super(key: key);
@@ -9,7 +12,7 @@ class StoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.router.push(MomentsStoryView());
+        context.router.push(const MomentsStoryView());
       },
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
@@ -32,7 +35,8 @@ class StoryWidget extends StatelessWidget {
                 radius: 29,
                 backgroundColor: Colors.white,
                 child: ClipOval(
-                  child: SizedBox(width: 56, height: 56, child: Image.network('https://picsum.photos/250?image=9')),
+                  child: SizedBox(
+                      width: 56, height: 56, child: Image.network(Utils.generateRandomImage(), fit: BoxFit.cover)),
                 ),
               ),
             ),
