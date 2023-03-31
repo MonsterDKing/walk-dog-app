@@ -39,11 +39,14 @@ dependencies:
   flutter_flavor: ^3.1.1
   flutter_localizations:
     sdk: flutter
+  flutter_staggered_grid_view: ^0.6.2
+  flutter_svg: ^2.0.4
   freezed_annotation: ^2.2.0
   google_fonts: ^4.0.3
   intl: ^0.17.0
   logger: ^1.3.0
   shared_preferences: ^2.0.20
+  story_view: ^0.14.0
 
 dev_dependencies:
   auto_route_generator: 6.0.1
