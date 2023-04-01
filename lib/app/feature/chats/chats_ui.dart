@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:walk_dog_app/core/common/utils/utils.dart';
-import 'package:walk_dog_app/app/feature/chat/chat_interactor.dart';
-import 'package:walk_dog_app/app/feature/chat/widgets/chat_conversation_item.dart';
-import 'package:walk_dog_app/app/feature/chat/widgets/chat_header.dart';
+import 'package:walk_dog_app/app/feature/chats/chats_interactor.dart';
+import 'package:walk_dog_app/app/feature/chats/widgets/chat_conversation_item.dart';
+import 'package:walk_dog_app/app/feature/chats/widgets/chat_header.dart';
 
-class ChatUI extends StatelessWidget {
-  const ChatUI({Key? key, required this.interactor}) : super(key: key);
-  final ChatInteractor interactor;
+class ChatsUI extends StatelessWidget {
+  const ChatsUI({Key? key, required this.interactor}) : super(key: key);
+  final ChatsInteractor interactor;
 
   @override
   Widget build(BuildContext context) {

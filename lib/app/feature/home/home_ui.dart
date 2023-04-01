@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:walk_dog_app/app/feature/home/home_interactor.dart';
+import 'package:walk_dog_app/core/common/utils/utils.dart';
 import 'package:walk_dog_app/locale/locale.dart';
 
 class HomeUI extends StatelessWidget {
@@ -86,7 +87,7 @@ class HomeOptionsWidget extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(14),
                       child: Image.network(
-                        'https://picsum.photos/id/237/200/300',
+                        Utils.generateRandomImage(),
                         fit: BoxFit.cover,
                         //add border radius
                       ),

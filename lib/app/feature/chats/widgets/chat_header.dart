@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:walk_dog_app/app/feature/chat/widgets/chat_search.dart';
+import 'package:walk_dog_app/app/feature/chats/widgets/chat_search.dart';
 
 class ChatHeader extends StatelessWidget {
   const ChatHeader({

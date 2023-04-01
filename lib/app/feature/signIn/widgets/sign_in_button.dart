@@ -14,36 +14,38 @@ class SignInButtonSignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 58,
-      width: 343,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(14),
-        gradient: const LinearGradient(
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
-          colors: [
-            Color(0xFFFE904B),
-            Color(0xFFFB724C),
-          ],
-        ),
-      ),
-      child: MaterialButton(
-        onPressed: () {
-          interactor.signIn();
-        },
-        minWidth: 343,
-        elevation: 0,
-        shape: RoundedRectangleBorder(
+    return Center(
+      child: Container(
+        height: 58,
+        width: 343,
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(14),
+          gradient: const LinearGradient(
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+            colors: [
+              Color(0xFFFE904B),
+              Color(0xFFFB724C),
+            ],
+          ),
         ),
-        child: Text(
-          text,
-          style: GoogleFonts.poppins(
-            textStyle: const TextStyle(
-              color: Colors.white,
-              fontSize: 17,
-              fontWeight: FontWeight.w700,
+        child: MaterialButton(
+          onPressed: () {
+            interactor.signIn();
+          },
+          minWidth: 343,
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
+          child: Text(
+            text,
+            style: GoogleFonts.poppins(
+              textStyle: const TextStyle(
+                color: Colors.white,
+                fontSize: 17,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
         ),

@@ -1,6 +1,7 @@
-
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:walk_dog_app/routes/router.gr.dart';
 
 class ConversationItemWidget extends StatefulWidget {
   final String name;
@@ -23,7 +24,9 @@ class _ConversationItemWidget extends State<ConversationItemWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        context.router.push(const ChatScreen());
+      },
       child: Container(
         padding: const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
         child: Row(
