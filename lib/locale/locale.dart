@@ -115,6 +115,10 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['homeSuggested'];
   }
 
+  String? get topWalkers {
+    return _localizedValues[locale.languageCode]!['topWalkers'];
+  }
+
   static List<Locale> getSupportedLocales() {
     List<Locale> toReturn = [];
     for (String langCode in AppConfig.languagesSupported.keys) {

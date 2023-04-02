@@ -22,6 +22,7 @@ Map<String, String> english() {
     'viewAll': 'View all',
     'homeNearYou': 'Near you',
     'homeSuggested': 'Suggested',
+    'topWalkers': 'Top walkers',
     //menu
     'homeMenu': 'Home',
     'homeMoments': 'Moments',

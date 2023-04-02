@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:walk_dog_app/app/feature/home/home_interactor.dart';
 import 'package:walk_dog_app/locale/locale.dart';
 
 class HomeTitleWidget extends StatelessWidget {
   const HomeTitleWidget({
     super.key,
+    required this.interactor,
   });
+
+  final HomeInteractor interactor;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +43,9 @@ class HomeTitleWidget extends StatelessWidget {
                   colors: [Color(0xFFFE904B), Color(0xFFFB724C)],
                 )),
             child: MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                interactor.bookAWalk();
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

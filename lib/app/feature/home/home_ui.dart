@@ -21,10 +21,12 @@ class HomeUI extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: SingleChildScrollView(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const HomeTitleWidget(),
+            HomeTitleWidget(
+              interactor: interactor,
+            ),
             const HomeSearchLocationWidget(),
             HomeSubTitle(
-              text: locale.nearYou!,
+              text: locale.topWalkers!,
             ),
             SizedBox(
               height: 190,
@@ -39,6 +41,24 @@ class HomeUI extends StatelessWidget {
             ),
             const SizedBox(
               height: 10,
+            ),
+            const Divider(),
+            const SizedBox(
+              height: 10,
+            ),
+            HomeSubTitle(
+              text: locale.nearYou!,
+            ),
+            SizedBox(
+              height: 190,
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: (BuildContext context, int index) {
+                  return const HomeOptionsWidget();
+                },
+              ),
             ),
             const Divider(),
             const SizedBox(

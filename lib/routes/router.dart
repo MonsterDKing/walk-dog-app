@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+
 import 'package:walk_dog_app/routes/router.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
@@ -19,5 +20,6 @@ class AppRouter extends $AppRouter {
     AutoRoute(page: ChatScreen.page),
     AutoRoute(page: MomentsStoryView.page),
     AutoRoute(page: DetailsScreen.page),
+    AutoRoute(page: BookWalkScreen.page)
   ];
 }

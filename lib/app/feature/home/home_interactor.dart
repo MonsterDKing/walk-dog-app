@@ -1,1 +1,3 @@
-abstract class HomeInteractor {}
+abstract class HomeInteractor {
+  void bookAWalk();
+}

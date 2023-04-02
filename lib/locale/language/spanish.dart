@@ -22,6 +22,7 @@ Map<String, String> spanish() {
     'viewAll': 'Ver todo',
     'homenearYou': 'Cerca de ti',
     'homeSuggested': 'Sugeridos',
+    'topWakers': 'Top paseadores',
     //menu
     'homeMenu': 'Inicio',
     'homeMoments': 'Momentos',

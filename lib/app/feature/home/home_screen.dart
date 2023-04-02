@@ -3,6 +3,7 @@ import 'package:auto_route/auto_route.dart';
 
 import 'package:walk_dog_app/app/feature/home/home_interactor.dart';
 import 'package:walk_dog_app/app/feature/home/home_ui.dart';
+import 'package:walk_dog_app/routes/router.gr.dart';
 
 @RoutePage(
   name: 'HomeScreen',
@@ -18,5 +19,10 @@ class _HomeScreenState extends State<HomeScreen> implements HomeInteractor {
   @override
   Widget build(BuildContext context) {
     return HomeUI(interactor: this);
+  }
+
+  @override
+  void bookAWalk() {
+    context.router.push(const BookWalkScreen());
   }
 }

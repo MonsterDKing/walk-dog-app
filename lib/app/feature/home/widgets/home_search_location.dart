@@ -28,6 +28,10 @@ class HomeSearchLocationWidget extends StatelessWidget {
               borderSide: const BorderSide(color: Color.fromRGBO(240, 240, 240, 1), width: 1.0),
               borderRadius: BorderRadius.circular(14),
             ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Color.fromRGBO(240, 240, 240, 1), width: 1.0),
+              borderRadius: BorderRadius.circular(14),
+            ),
             labelText: "My location",
             labelStyle: GoogleFonts.poppins(
                 textStyle: const TextStyle(
