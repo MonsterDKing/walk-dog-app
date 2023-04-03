@@ -4,7 +4,7 @@ abstract class IAuthRepository {
   Future<void> signInWithGoogle();
   Future<void> signInWithFacebook();
   Future<void> signIn();
-  Future<void> signUp();
+  Future<void> signUp(String fullName, String cellPhone, String password);
 }
 
 class AuthRepository implements IAuthRepository {
@@ -28,7 +28,7 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future<void> signUp() async {
+  Future<void> signUp(String fullName, String cellPhone, String password) async {
     _apiRestClient.call(HttpMethod.get, "url");
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:walk_dog_app/app/di.dart';
+import 'package:walk_dog_app/app/feature/signIn/providers.dart';
 
 import 'package:walk_dog_app/locale/locale.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';

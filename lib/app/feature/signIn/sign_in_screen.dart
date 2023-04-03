@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:walk_dog_app/app/feature/signIn/bloc/auth_bloc.dart';
 import 'package:walk_dog_app/app/feature/signIn/sign_in_interactor.dart';
 import 'package:walk_dog_app/app/feature/signIn/sign_in_ui.dart';
 import 'package:walk_dog_app/routes/router.gr.dart';
@@ -30,7 +32,7 @@ class _SignInScreenState extends State<SignInScreen> implements SignInInteractor
 
   @override
   Future<void> signIn() async {
-    context.router.push(const TabsScreen());
+    context.read<AuthBloc>().add(const AuthEvent.signIn());
   }
 
   @override

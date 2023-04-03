@@ -1,6 +1,11 @@
 part of 'auth_bloc.dart';
 
-enum AuthStatus { initial, authenticated, unauthenticated }
+enum AuthStatus {
+  initial,
+  authenticated,
+  unauthenticated,
+  loading,
+}
 
 @freezed
 class AuthState with _$AuthState {

@@ -18,7 +18,9 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AuthEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() signUp,
+    required TResult Function(
+            String fullName, String cellPhone, String password)
+        signUp,
     required TResult Function() signIn,
     required TResult Function() signInFacebook,
     required TResult Function() signInGoogle,
@@ -26,7 +28,8 @@ mixin _$AuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signUp,
+    TResult? Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult? Function()? signIn,
     TResult? Function()? signInFacebook,
     TResult? Function()? signInGoogle,
@@ -34,7 +37,8 @@ mixin _$AuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signUp,
+    TResult Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult Function()? signIn,
     TResult Function()? signInFacebook,
     TResult Function()? signInGoogle,
@@ -89,6 +93,8 @@ class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
 abstract class _$$_SignUpCopyWith<$Res> {
   factory _$$_SignUpCopyWith(_$_SignUp value, $Res Function(_$_SignUp) then) =
       __$$_SignUpCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String fullName, String cellPhone, String password});
 }
 
 /// @nodoc
@@ -97,60 +103,107 @@ class __$$_SignUpCopyWithImpl<$Res>
     implements _$$_SignUpCopyWith<$Res> {
   __$$_SignUpCopyWithImpl(_$_SignUp _value, $Res Function(_$_SignUp) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? fullName = null,
+    Object? cellPhone = null,
+    Object? password = null,
+  }) {
+    return _then(_$_SignUp(
+      null == fullName
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == cellPhone
+          ? _value.cellPhone
+          : cellPhone // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_SignUp implements _SignUp {
-  const _$_SignUp();
+  const _$_SignUp(this.fullName, this.cellPhone, this.password);
+
+  @override
+  final String fullName;
+  @override
+  final String cellPhone;
+  @override
+  final String password;
 
   @override
   String toString() {
-    return 'AuthEvent.signUp()';
+    return 'AuthEvent.signUp(fullName: $fullName, cellPhone: $cellPhone, password: $password)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_SignUp);
+        (other.runtimeType == runtimeType &&
+            other is _$_SignUp &&
+            (identical(other.fullName, fullName) ||
+                other.fullName == fullName) &&
+            (identical(other.cellPhone, cellPhone) ||
+                other.cellPhone == cellPhone) &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, fullName, cellPhone, password);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SignUpCopyWith<_$_SignUp> get copyWith =>
+      __$$_SignUpCopyWithImpl<_$_SignUp>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() signUp,
+    required TResult Function(
+            String fullName, String cellPhone, String password)
+        signUp,
     required TResult Function() signIn,
     required TResult Function() signInFacebook,
     required TResult Function() signInGoogle,
   }) {
-    return signUp();
+    return signUp(fullName, cellPhone, password);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signUp,
+    TResult? Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult? Function()? signIn,
     TResult? Function()? signInFacebook,
     TResult? Function()? signInGoogle,
   }) {
-    return signUp?.call();
+    return signUp?.call(fullName, cellPhone, password);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signUp,
+    TResult Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult Function()? signIn,
     TResult Function()? signInFacebook,
     TResult Function()? signInGoogle,
     required TResult orElse(),
   }) {
     if (signUp != null) {
-      return signUp();
+      return signUp(fullName, cellPhone, password);
     }
     return orElse();
   }
@@ -194,7 +247,15 @@ class _$_SignUp implements _SignUp {
 }
 
 abstract class _SignUp implements AuthEvent {
-  const factory _SignUp() = _$_SignUp;
+  const factory _SignUp(final String fullName, final String cellPhone,
+      final String password) = _$_SignUp;
+
+  String get fullName;
+  String get cellPhone;
+  String get password;
+  @JsonKey(ignore: true)
+  _$$_SignUpCopyWith<_$_SignUp> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -233,7 +294,9 @@ class _$_SignIn implements _SignIn {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() signUp,
+    required TResult Function(
+            String fullName, String cellPhone, String password)
+        signUp,
     required TResult Function() signIn,
     required TResult Function() signInFacebook,
     required TResult Function() signInGoogle,
@@ -244,7 +307,8 @@ class _$_SignIn implements _SignIn {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signUp,
+    TResult? Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult? Function()? signIn,
     TResult? Function()? signInFacebook,
     TResult? Function()? signInGoogle,
@@ -255,7 +319,8 @@ class _$_SignIn implements _SignIn {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signUp,
+    TResult Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult Function()? signIn,
     TResult Function()? signInFacebook,
     TResult Function()? signInGoogle,
@@ -347,7 +412,9 @@ class _$_SignInFacebook implements _SignInFacebook {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() signUp,
+    required TResult Function(
+            String fullName, String cellPhone, String password)
+        signUp,
     required TResult Function() signIn,
     required TResult Function() signInFacebook,
     required TResult Function() signInGoogle,
@@ -358,7 +425,8 @@ class _$_SignInFacebook implements _SignInFacebook {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signUp,
+    TResult? Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult? Function()? signIn,
     TResult? Function()? signInFacebook,
     TResult? Function()? signInGoogle,
@@ -369,7 +437,8 @@ class _$_SignInFacebook implements _SignInFacebook {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signUp,
+    TResult Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult Function()? signIn,
     TResult Function()? signInFacebook,
     TResult Function()? signInGoogle,
@@ -461,7 +530,9 @@ class _$_SignInGoogle implements _SignInGoogle {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() signUp,
+    required TResult Function(
+            String fullName, String cellPhone, String password)
+        signUp,
     required TResult Function() signIn,
     required TResult Function() signInFacebook,
     required TResult Function() signInGoogle,
@@ -472,7 +543,8 @@ class _$_SignInGoogle implements _SignInGoogle {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signUp,
+    TResult? Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult? Function()? signIn,
     TResult? Function()? signInFacebook,
     TResult? Function()? signInGoogle,
@@ -483,7 +555,8 @@ class _$_SignInGoogle implements _SignInGoogle {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signUp,
+    TResult Function(String fullName, String cellPhone, String password)?
+        signUp,
     TResult Function()? signIn,
     TResult Function()? signInFacebook,
     TResult Function()? signInGoogle,

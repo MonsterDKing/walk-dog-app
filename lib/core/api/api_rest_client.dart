@@ -8,7 +8,7 @@ import 'interceptors/authorization_interceptor.dart';
 
 class ApiService {
   static Dio dio = Dio(BaseOptions(
-    baseUrl: FlavorConfig.instance.variables["baseUrl"] as String,
+    baseUrl: "https://pub.dev/packages/get_it",
     contentType: Headers.jsonContentType,
     headers: <String, String>{
       'Accept': 'application/json',
