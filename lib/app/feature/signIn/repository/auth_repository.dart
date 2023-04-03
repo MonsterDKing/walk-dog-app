@@ -29,6 +29,11 @@ class AuthRepository implements IAuthRepository {
 
   @override
   Future<void> signUp(String fullName, String cellPhone, String password) async {
-    _apiRestClient.call(HttpMethod.get, "url");
+    var data = {
+      "fullName": fullName,
+      "cellPhone": cellPhone,
+      "password": password,
+    };
+    _apiRestClient.call(HttpMethod.get, "url", body: data);
   }
 }

@@ -32,11 +32,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   _sigUp(_SignUp event, Emitter<AuthState> emit) {
     _logger.d('SignUp');
     emit(state.copyWith(status: AuthStatus.loading));
-    var data = {
-      'fullName': event.fullName,
-      'cellPhone': event.cellPhone,
-      'password': event.password,
-    };
     _authRepository.signUp(event.fullName, event.cellPhone, event.password);
   }
 
