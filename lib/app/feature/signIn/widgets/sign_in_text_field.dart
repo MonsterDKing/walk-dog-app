@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignInTextFieldWidget extends StatelessWidget {
-  const SignInTextFieldWidget({super.key, required this.label});
+  const SignInTextFieldWidget({super.key, required this.label, this.isPassword = false, this.isPhone = false});
   final String label;
+  final bool isPassword;
+  final bool isPhone;
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +13,9 @@ class SignInTextFieldWidget extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 10),
       height: 60,
       child: TextField(
+        //only number
+        keyboardType: isPhone ? TextInputType.number : TextInputType.text,
+        obscureText: isPassword ? true : false,
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(14),

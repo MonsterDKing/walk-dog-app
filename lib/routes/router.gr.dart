@@ -11,16 +11,16 @@
 import 'package:auto_route/auto_route.dart' as _i12;
 import 'package:flutter/material.dart' as _i13;
 import 'package:walk_dog_app/app/feature/book_walk/book_walk_screen.dart'
-    as _i11;
-import 'package:walk_dog_app/app/feature/chats/chat/chat_screen.dart' as _i8;
-import 'package:walk_dog_app/app/feature/chats/chats_screen.dart' as _i9;
+    as _i8;
+import 'package:walk_dog_app/app/feature/chats/chat/chat_screen.dart' as _i9;
+import 'package:walk_dog_app/app/feature/chats/chats_screen.dart' as _i10;
 import 'package:walk_dog_app/app/feature/details/details_screen.dart' as _i5;
 import 'package:walk_dog_app/app/feature/home/home_screen.dart' as _i2;
 import 'package:walk_dog_app/app/feature/moments/moments_screen.dart' as _i3;
 import 'package:walk_dog_app/app/feature/moments/widgets/moments_story_view.dart'
     as _i4;
 import 'package:walk_dog_app/app/feature/onboarding/onboarding_screen.dart'
-    as _i10;
+    as _i11;
 import 'package:walk_dog_app/app/feature/profile/profile_screen.dart' as _i7;
 import 'package:walk_dog_app/app/feature/signIn/sign_in_screen.dart' as _i6;
 import 'package:walk_dog_app/app/feature/tabs/tabs_screen.dart' as _i1;
@@ -73,28 +73,28 @@ abstract class $AppRouter extends _i12.RootStackRouter {
         child: const _i7.ProfileScreen(),
       );
     },
+    BookWalkScreen.name: (routeData) {
+      return _i12.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i8.BookWalkScreen(),
+      );
+    },
     ChatScreen.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.ChatScreen(),
+        child: const _i9.ChatScreen(),
       );
     },
     ChatsScreen.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.ChatsScreen(),
+        child: const _i10.ChatsScreen(),
       );
     },
     OnboardingScreen.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.OnboardingScreen(),
-      );
-    },
-    BookWalkScreen.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i11.BookWalkScreen(),
+        child: const _i11.OnboardingScreen(),
       );
     },
   };
@@ -199,7 +199,21 @@ class ProfileScreen extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.ChatScreen]
+/// [_i8.BookWalkScreen]
+class BookWalkScreen extends _i12.PageRouteInfo<void> {
+  const BookWalkScreen({List<_i12.PageRouteInfo>? children})
+      : super(
+          BookWalkScreen.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'BookWalkScreen';
+
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i9.ChatScreen]
 class ChatScreen extends _i12.PageRouteInfo<void> {
   const ChatScreen({List<_i12.PageRouteInfo>? children})
       : super(
@@ -213,7 +227,7 @@ class ChatScreen extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i9.ChatsScreen]
+/// [_i10.ChatsScreen]
 class ChatsScreen extends _i12.PageRouteInfo<void> {
   const ChatsScreen({List<_i12.PageRouteInfo>? children})
       : super(
@@ -227,7 +241,7 @@ class ChatsScreen extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i10.OnboardingScreen]
+/// [_i11.OnboardingScreen]
 class OnboardingScreen extends _i12.PageRouteInfo<void> {
   const OnboardingScreen({List<_i12.PageRouteInfo>? children})
       : super(
@@ -236,20 +250,6 @@ class OnboardingScreen extends _i12.PageRouteInfo<void> {
         );
 
   static const String name = 'OnboardingScreen';
-
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i11.BookWalkScreen]
-class BookWalkScreen extends _i12.PageRouteInfo<void> {
-  const BookWalkScreen({List<_i12.PageRouteInfo>? children})
-      : super(
-          BookWalkScreen.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'BookWalkScreen';
 
   static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }

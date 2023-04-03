@@ -48,8 +48,14 @@ class SignUI extends StatelessWidget {
                   textStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: (Colors.grey))),
             ),
             SignInTextFieldWidget(label: locale.fullName!),
-            SignInTextFieldWidget(label: locale.phone!),
-            SignInTextFieldWidget(label: locale.passsword!),
+            SignInTextFieldWidget(
+              label: locale.phone!,
+              isPhone: true,
+            ),
+            SignInTextFieldWidget(
+              label: locale.passsword!,
+              isPassword: true,
+            ),
             SignInButtonSignUp(
               text: locale.signUpButton!,
               interactor: interactor,

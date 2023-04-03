@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'api_rest_result.dart';
 
@@ -25,9 +25,9 @@ mixin _$APIResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Object data)? succeeded,
-    TResult Function(Object data)? failed,
-    TResult Function(String message)? error,
+    TResult? Function(Object data)? succeeded,
+    TResult? Function(Object data)? failed,
+    TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,9 +47,9 @@ mixin _$APIResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Succeeded value)? succeeded,
-    TResult Function(Failed value)? failed,
-    TResult Function(Error value)? error,
+    TResult? Function(Succeeded value)? succeeded,
+    TResult? Function(Failed value)? failed,
+    TResult? Function(Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,16 +65,18 @@ mixin _$APIResult {
 /// @nodoc
 abstract class $APIResultCopyWith<$Res> {
   factory $APIResultCopyWith(APIResult value, $Res Function(APIResult) then) =
-      _$APIResultCopyWithImpl<$Res>;
+      _$APIResultCopyWithImpl<$Res, APIResult>;
 }
 
 /// @nodoc
-class _$APIResultCopyWithImpl<$Res> implements $APIResultCopyWith<$Res> {
+class _$APIResultCopyWithImpl<$Res, $Val extends APIResult>
+    implements $APIResultCopyWith<$Res> {
   _$APIResultCopyWithImpl(this._value, this._then);
 
-  final APIResult _value;
   // ignore: unused_field
-  final $Res Function(APIResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -82,28 +84,25 @@ abstract class _$$SucceededCopyWith<$Res> {
   factory _$$SucceededCopyWith(
           _$Succeeded value, $Res Function(_$Succeeded) then) =
       __$$SucceededCopyWithImpl<$Res>;
+  @useResult
   $Res call({Object data});
 }
 
 /// @nodoc
-class __$$SucceededCopyWithImpl<$Res> extends _$APIResultCopyWithImpl<$Res>
+class __$$SucceededCopyWithImpl<$Res>
+    extends _$APIResultCopyWithImpl<$Res, _$Succeeded>
     implements _$$SucceededCopyWith<$Res> {
   __$$SucceededCopyWithImpl(
       _$Succeeded _value, $Res Function(_$Succeeded) _then)
-      : super(_value, (v) => _then(v as _$Succeeded));
+      : super(_value, _then);
 
-  @override
-  _$Succeeded get _value => super._value as _$Succeeded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$Succeeded(
-      data == freezed
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as Object,
+      null == data ? _value.data : data,
     ));
   }
 }
@@ -135,6 +134,7 @@ class _$Succeeded implements Succeeded {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SucceededCopyWith<_$Succeeded> get copyWith =>
       __$$SucceededCopyWithImpl<_$Succeeded>(this, _$identity);
 
@@ -151,9 +151,9 @@ class _$Succeeded implements Succeeded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Object data)? succeeded,
-    TResult Function(Object data)? failed,
-    TResult Function(String message)? error,
+    TResult? Function(Object data)? succeeded,
+    TResult? Function(Object data)? failed,
+    TResult? Function(String message)? error,
   }) {
     return succeeded?.call(data);
   }
@@ -185,9 +185,9 @@ class _$Succeeded implements Succeeded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Succeeded value)? succeeded,
-    TResult Function(Failed value)? failed,
-    TResult Function(Error value)? error,
+    TResult? Function(Succeeded value)? succeeded,
+    TResult? Function(Failed value)? failed,
+    TResult? Function(Error value)? error,
   }) {
     return succeeded?.call(this);
   }
@@ -210,7 +210,7 @@ class _$Succeeded implements Succeeded {
 abstract class Succeeded implements APIResult {
   const factory Succeeded(final Object data) = _$Succeeded;
 
-  Object get data => throw _privateConstructorUsedError;
+  Object get data;
   @JsonKey(ignore: true)
   _$$SucceededCopyWith<_$Succeeded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -220,27 +220,24 @@ abstract class Succeeded implements APIResult {
 abstract class _$$FailedCopyWith<$Res> {
   factory _$$FailedCopyWith(_$Failed value, $Res Function(_$Failed) then) =
       __$$FailedCopyWithImpl<$Res>;
+  @useResult
   $Res call({Object data});
 }
 
 /// @nodoc
-class __$$FailedCopyWithImpl<$Res> extends _$APIResultCopyWithImpl<$Res>
+class __$$FailedCopyWithImpl<$Res>
+    extends _$APIResultCopyWithImpl<$Res, _$Failed>
     implements _$$FailedCopyWith<$Res> {
   __$$FailedCopyWithImpl(_$Failed _value, $Res Function(_$Failed) _then)
-      : super(_value, (v) => _then(v as _$Failed));
+      : super(_value, _then);
 
-  @override
-  _$Failed get _value => super._value as _$Failed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$Failed(
-      data == freezed
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as Object,
+      null == data ? _value.data : data,
     ));
   }
 }
@@ -272,6 +269,7 @@ class _$Failed implements Failed {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$FailedCopyWith<_$Failed> get copyWith =>
       __$$FailedCopyWithImpl<_$Failed>(this, _$identity);
 
@@ -288,9 +286,9 @@ class _$Failed implements Failed {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Object data)? succeeded,
-    TResult Function(Object data)? failed,
-    TResult Function(String message)? error,
+    TResult? Function(Object data)? succeeded,
+    TResult? Function(Object data)? failed,
+    TResult? Function(String message)? error,
   }) {
     return failed?.call(data);
   }
@@ -322,9 +320,9 @@ class _$Failed implements Failed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Succeeded value)? succeeded,
-    TResult Function(Failed value)? failed,
-    TResult Function(Error value)? error,
+    TResult? Function(Succeeded value)? succeeded,
+    TResult? Function(Failed value)? failed,
+    TResult? Function(Error value)? error,
   }) {
     return failed?.call(this);
   }
@@ -347,7 +345,7 @@ class _$Failed implements Failed {
 abstract class Failed implements APIResult {
   const factory Failed(final Object data) = _$Failed;
 
-  Object get data => throw _privateConstructorUsedError;
+  Object get data;
   @JsonKey(ignore: true)
   _$$FailedCopyWith<_$Failed> get copyWith =>
       throw _privateConstructorUsedError;
@@ -357,24 +355,23 @@ abstract class Failed implements APIResult {
 abstract class _$$ErrorCopyWith<$Res> {
   factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
       __$$ErrorCopyWithImpl<$Res>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorCopyWithImpl<$Res> extends _$APIResultCopyWithImpl<$Res>
+class __$$ErrorCopyWithImpl<$Res> extends _$APIResultCopyWithImpl<$Res, _$Error>
     implements _$$ErrorCopyWith<$Res> {
   __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
-      : super(_value, (v) => _then(v as _$Error));
+      : super(_value, _then);
 
-  @override
-  _$Error get _value => super._value as _$Error;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_$Error(
-      message == freezed
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -400,15 +397,15 @@ class _$Error implements Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Error &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ErrorCopyWith<_$Error> get copyWith =>
       __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
 
@@ -425,9 +422,9 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Object data)? succeeded,
-    TResult Function(Object data)? failed,
-    TResult Function(String message)? error,
+    TResult? Function(Object data)? succeeded,
+    TResult? Function(Object data)? failed,
+    TResult? Function(String message)? error,
   }) {
     return error?.call(message);
   }
@@ -459,9 +456,9 @@ class _$Error implements Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Succeeded value)? succeeded,
-    TResult Function(Failed value)? failed,
-    TResult Function(Error value)? error,
+    TResult? Function(Succeeded value)? succeeded,
+    TResult? Function(Failed value)? failed,
+    TResult? Function(Error value)? error,
   }) {
     return error?.call(this);
   }
@@ -484,7 +481,7 @@ class _$Error implements Error {
 abstract class Error implements APIResult {
   const factory Error(final String message) = _$Error;
 
-  String get message => throw _privateConstructorUsedError;
+  String get message;
   @JsonKey(ignore: true)
   _$$ErrorCopyWith<_$Error> get copyWith => throw _privateConstructorUsedError;
 }

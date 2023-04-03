@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:walk_dog_app/app/di.dart';
 
 import 'package:walk_dog_app/locale/locale.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -11,9 +12,12 @@ import 'package:walk_dog_app/routes/router.dart';
 import 'package:walk_dog_app/app/blocs/language_cubit.dart';
 
 void main() async {
+  getItSetup();
+
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider(create: (context) => LanguageCubit()..getCurrentLanguage()),
+      ...authBlocs,
     ],
     child: const DogWalkingApp(),
   ));

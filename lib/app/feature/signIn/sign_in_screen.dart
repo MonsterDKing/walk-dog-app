@@ -26,9 +26,7 @@ class _SignInScreenState extends State<SignInScreen> implements SignInInteractor
   }
 
   @override
-  void privacyPolicy() {
-    // TODO: implement privacyPolicy
-  }
+  void privacyPolicy() {}
 
   @override
   Future<void> signIn() async {
