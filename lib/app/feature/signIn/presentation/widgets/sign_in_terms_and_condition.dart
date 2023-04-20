@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:walk_dog_app/app/feature/signIn/sign_in_interactor.dart';
+import 'package:walk_dog_app/app/feature/signIn/presentation/sign_in_interactor.dart';
 
 class SignInTermsAndCondition extends StatelessWidget {
   const SignInTermsAndCondition({

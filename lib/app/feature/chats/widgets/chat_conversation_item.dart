@@ -25,7 +25,10 @@ class _ConversationItemWidget extends State<ConversationItemWidget> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.router.push(const ChatScreen());
+        // context.router.push(const ChatScreen());
+        final tabsRouter = context.router.innerRouterOf<TabsRouter>(TabsScreen.name);
+        tabsRouter?.navigate(const ChatScreen()).onError((error, stackTrace) => print(error));
+        print(tabsRouter);
       },
       child: Container(
         padding: const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
@@ -78,7 +81,7 @@ class _ConversationItemWidget extends State<ConversationItemWidget> {
               ),
             ),
             widget.isMessageRead
-                ? SizedBox()
+                ? const SizedBox.shrink()
                 : Container(
                     width: 10,
                     height: 10,

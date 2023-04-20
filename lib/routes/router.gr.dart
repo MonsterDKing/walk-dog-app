@@ -11,18 +11,19 @@
 import 'package:auto_route/auto_route.dart' as _i12;
 import 'package:flutter/material.dart' as _i13;
 import 'package:walk_dog_app/app/feature/book_walk/book_walk_screen.dart'
-    as _i8;
-import 'package:walk_dog_app/app/feature/chats/chat/chat_screen.dart' as _i9;
-import 'package:walk_dog_app/app/feature/chats/chats_screen.dart' as _i10;
+    as _i7;
+import 'package:walk_dog_app/app/feature/chats/chat/chat_screen.dart' as _i8;
+import 'package:walk_dog_app/app/feature/chats/chats_screen.dart' as _i9;
 import 'package:walk_dog_app/app/feature/details/details_screen.dart' as _i5;
 import 'package:walk_dog_app/app/feature/home/home_screen.dart' as _i2;
 import 'package:walk_dog_app/app/feature/moments/moments_screen.dart' as _i3;
 import 'package:walk_dog_app/app/feature/moments/widgets/moments_story_view.dart'
     as _i4;
 import 'package:walk_dog_app/app/feature/onboarding/onboarding_screen.dart'
+    as _i10;
+import 'package:walk_dog_app/app/feature/profile/profile_screen.dart' as _i6;
+import 'package:walk_dog_app/app/feature/signIn/presentation/sign_in_screen.dart'
     as _i11;
-import 'package:walk_dog_app/app/feature/profile/profile_screen.dart' as _i7;
-import 'package:walk_dog_app/app/feature/signIn/sign_in_screen.dart' as _i6;
 import 'package:walk_dog_app/app/feature/tabs/tabs_screen.dart' as _i1;
 
 abstract class $AppRouter extends _i12.RootStackRouter {
@@ -61,40 +62,40 @@ abstract class $AppRouter extends _i12.RootStackRouter {
         child: const _i5.DetailsScreen(),
       );
     },
-    SignInScreen.name: (routeData) {
-      return _i12.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i6.SignInScreen(),
-      );
-    },
     ProfileScreen.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.ProfileScreen(),
+        child: const _i6.ProfileScreen(),
       );
     },
     BookWalkScreen.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.BookWalkScreen(),
+        child: const _i7.BookWalkScreen(),
       );
     },
     ChatScreen.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.ChatScreen(),
+        child: const _i8.ChatScreen(),
       );
     },
     ChatsScreen.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.ChatsScreen(),
+        child: const _i9.ChatsScreen(),
       );
     },
     OnboardingScreen.name: (routeData) {
       return _i12.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i11.OnboardingScreen(),
+        child: const _i10.OnboardingScreen(),
+      );
+    },
+    SignInScreen.name: (routeData) {
+      return _i12.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i11.SignInScreen(),
       );
     },
   };
@@ -171,21 +172,7 @@ class DetailsScreen extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i6.SignInScreen]
-class SignInScreen extends _i12.PageRouteInfo<void> {
-  const SignInScreen({List<_i12.PageRouteInfo>? children})
-      : super(
-          SignInScreen.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'SignInScreen';
-
-  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i7.ProfileScreen]
+/// [_i6.ProfileScreen]
 class ProfileScreen extends _i12.PageRouteInfo<void> {
   const ProfileScreen({List<_i12.PageRouteInfo>? children})
       : super(
@@ -199,7 +186,7 @@ class ProfileScreen extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.BookWalkScreen]
+/// [_i7.BookWalkScreen]
 class BookWalkScreen extends _i12.PageRouteInfo<void> {
   const BookWalkScreen({List<_i12.PageRouteInfo>? children})
       : super(
@@ -213,7 +200,7 @@ class BookWalkScreen extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i9.ChatScreen]
+/// [_i8.ChatScreen]
 class ChatScreen extends _i12.PageRouteInfo<void> {
   const ChatScreen({List<_i12.PageRouteInfo>? children})
       : super(
@@ -227,7 +214,7 @@ class ChatScreen extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i10.ChatsScreen]
+/// [_i9.ChatsScreen]
 class ChatsScreen extends _i12.PageRouteInfo<void> {
   const ChatsScreen({List<_i12.PageRouteInfo>? children})
       : super(
@@ -241,7 +228,7 @@ class ChatsScreen extends _i12.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i11.OnboardingScreen]
+/// [_i10.OnboardingScreen]
 class OnboardingScreen extends _i12.PageRouteInfo<void> {
   const OnboardingScreen({List<_i12.PageRouteInfo>? children})
       : super(
@@ -250,6 +237,20 @@ class OnboardingScreen extends _i12.PageRouteInfo<void> {
         );
 
   static const String name = 'OnboardingScreen';
+
+  static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i11.SignInScreen]
+class SignInScreen extends _i12.PageRouteInfo<void> {
+  const SignInScreen({List<_i12.PageRouteInfo>? children})
+      : super(
+          SignInScreen.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SignInScreen';
 
   static const _i12.PageInfo<void> page = _i12.PageInfo<void>(name);
 }

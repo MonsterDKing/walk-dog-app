@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:walk_dog_app/app/assets/assets.dart';
-import 'package:walk_dog_app/app/feature/signIn/sign_in_interactor.dart';
+import 'package:walk_dog_app/app/feature/signIn/presentation/sign_in_interactor.dart';
 
-class GoogleButtonSignUp extends StatelessWidget {
-  const GoogleButtonSignUp({
+class FacebookButtonSignUp extends StatelessWidget {
+  const FacebookButtonSignUp({
     super.key,
     required this.text,
     required this.interactor,
@@ -20,29 +19,35 @@ class GoogleButtonSignUp extends StatelessWidget {
       child: Container(
         height: 60,
         width: 343,
-        decoration: BoxDecoration(
-            borderRadius: const BorderRadius.all(Radius.circular(14)),
-            color: Colors.white,
-            border: Border.all(color: Colors.black)),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(14)),
+          color: Color(0xFF3B5998),
+        ),
         child: MaterialButton(
           onPressed: () {
-            interactor.signInWithGoogle();
+            interactor.signInWithFacebook();
           },
           minWidth: 343,
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
+          color: Colors.transparent,
           child: Row(
             children: [
-              Container(margin: const EdgeInsets.only(left: 20), child: Image.asset(Assets.googleIconImage)),
+              Container(
+                  margin: const EdgeInsets.only(left: 20),
+                  child: const Icon(
+                    Icons.facebook,
+                    color: Colors.white,
+                  )),
               Container(
                 margin: const EdgeInsets.only(left: 20),
                 child: Text(
                   text,
                   style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 17,
                     fontWeight: FontWeight.w500,
                   )),

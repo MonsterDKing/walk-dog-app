@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //components
-import 'package:walk_dog_app/app/feature/signIn/widgets/sign_in_button.dart';
-import 'package:walk_dog_app/app/feature/signIn/widgets/sign_in_facebook_button.dart';
-import 'package:walk_dog_app/app/feature/signIn/widgets/sign_in_google_button.dart';
-import 'package:walk_dog_app/app/feature/signIn/widgets/sign_in_terms_and_condition.dart';
-import 'package:walk_dog_app/app/feature/signIn/widgets/sign_in_text_field.dart';
+import 'package:walk_dog_app/app/feature/signIn/presentation/widgets/sign_in_button.dart';
+import 'package:walk_dog_app/app/feature/signIn/presentation/widgets/sign_in_facebook_button.dart';
+import 'package:walk_dog_app/app/feature/signIn/presentation/widgets/sign_in_google_button.dart';
+import 'package:walk_dog_app/app/feature/signIn/presentation/widgets/sign_in_terms_and_condition.dart';
+import 'package:walk_dog_app/app/feature/signIn/presentation/widgets/sign_in_text_field.dart';
 
 //internals
-import 'package:walk_dog_app/app/feature/signIn/sign_in_interactor.dart';
+import 'package:walk_dog_app/app/feature/signIn/presentation/sign_in_interactor.dart';
 import 'package:walk_dog_app/locale/locale.dart';
 
 class SignUI extends StatelessWidget {
