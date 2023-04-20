@@ -1,12 +1,10 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:walk_dog_app/app/feature/profile/profile_interactor.dart';
 import 'package:walk_dog_app/app/feature/profile/profile_ui.dart';
 
-@RoutePage(name: "ProfileScreen")
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
-
+  static const name = 'ProfileScreen';
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }

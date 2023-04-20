@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
+
 import 'package:walk_dog_app/app/feature/moments/moments_interactor.dart';
 import 'package:walk_dog_app/app/feature/moments/moments_ui.dart';
 
-@RoutePage(
-  name: 'MomentsScreen',
-)
 class MomentsScreen extends StatefulWidget {
   const MomentsScreen({super.key});
+  static const name = 'MomentsScreen';
 
   @override
   State<MomentsScreen> createState() => _MomentsScreenState();

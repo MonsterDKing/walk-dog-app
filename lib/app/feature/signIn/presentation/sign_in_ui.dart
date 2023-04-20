@@ -1,6 +1,7 @@
 //libs
-import 'package:auto_route/auto_route.dart';
+
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //components
@@ -32,7 +33,8 @@ class SignUI extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 constraints: const BoxConstraints(),
                 onPressed: () {
-                  context.router.pop();
+                  context.pop();
+                  //todo context pop go
                 },
                 icon: const Icon(Icons.arrow_back)),
             const SizedBox(

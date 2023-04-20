@@ -1,8 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:walk_dog_app/routes/router.gr.dart';
 import 'package:walk_dog_app/core/common/utils/utils.dart';
 
 class StoryWidget extends StatelessWidget {
@@ -11,9 +9,7 @@ class StoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        context.router.push(const MomentsStoryView());
-      },
+      onTap: () {},
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         width: 64,

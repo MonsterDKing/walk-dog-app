@@ -1,8 +1,6 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:walk_dog_app/core/common/utils/utils.dart';
-import 'package:walk_dog_app/routes/router.gr.dart';
 
 class HomeOptionsWidget extends StatelessWidget {
   const HomeOptionsWidget({
@@ -13,7 +11,7 @@ class HomeOptionsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.router.push(DetailsScreen());
+        // context.router.push(DetailsScreen());
       },
       child: Container(
         margin: const EdgeInsets.only(

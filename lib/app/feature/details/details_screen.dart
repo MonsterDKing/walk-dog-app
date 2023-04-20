@@ -1,12 +1,10 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:walk_dog_app/app/feature/details/details_interactor.dart';
 import 'package:walk_dog_app/app/feature/details/details_ui.dart';
 
-@RoutePage(name: "DetailsScreen")
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({super.key});
-
+  static const name = 'DetailsScreen';
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
 }

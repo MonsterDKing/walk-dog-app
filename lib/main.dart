@@ -32,8 +32,6 @@ class DogWalkingApp extends StatefulWidget {
 }
 
 class _DogWalkingAppState extends State<DogWalkingApp> {
-  final _rootRouter = AppRouter();
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
@@ -41,13 +39,13 @@ class _DogWalkingAppState extends State<DogWalkingApp> {
       DeviceOrientation.portraitDown,
     ]);
     return MaterialApp.router(
+      routerConfig: appRouter,
       localizationsDelegates: const [
         AppLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      routerConfig: _rootRouter.config(),
       theme: appTheme,
       title: 'Material App',
       debugShowCheckedModeBanner: false,

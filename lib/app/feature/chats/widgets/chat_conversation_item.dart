@@ -1,7 +1,7 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:walk_dog_app/routes/router.gr.dart';
+import 'package:walk_dog_app/app/feature/chats/chat/chat_screen.dart';
 
 class ConversationItemWidget extends StatefulWidget {
   final String name;
@@ -26,9 +26,10 @@ class _ConversationItemWidget extends State<ConversationItemWidget> {
     return GestureDetector(
       onTap: () {
         // context.router.push(const ChatScreen());
-        final tabsRouter = context.router.innerRouterOf<TabsRouter>(TabsScreen.name);
-        tabsRouter?.navigate(const ChatScreen()).onError((error, stackTrace) => print(error));
-        print(tabsRouter);
+        // final tabsRouter = context.router.innerRouterOf<TabsRouter>(TabsScreen.name);
+        // tabsRouter?.navigate(const ChatScreen()).onError((error, stackTrace) => print(error));
+        // print(tabsRouter);
+        context.goNamed(ChatScreen.name);
       },
       child: Container(
         padding: const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),

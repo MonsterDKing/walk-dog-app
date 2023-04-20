@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import 'package:auto_route/auto_route.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:walk_dog_app/core/common/utils/utils.dart';
@@ -22,7 +22,7 @@ class ChatHeaderWidget extends StatelessWidget {
               constraints: const BoxConstraints(),
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
-                context.router.pop();
+                context.pop();
               },
             ),
             const SizedBox(
