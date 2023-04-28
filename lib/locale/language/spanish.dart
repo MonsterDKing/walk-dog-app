@@ -12,7 +12,8 @@ Map<String, String> spanish() {
     'signUpButton': 'Sign Up',
     'connectWithFacebook': 'Connectar con Facebook',
     'connectWithGoogle': 'Connectar con Google',
-    'fullName': 'Nombre completo',
+    'name': 'Name',
+    'lastName': 'Last name',
     'phone': 'Celular',
     'passsword': 'Contraseña',
     //home

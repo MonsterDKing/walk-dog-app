@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:walk_dog_app/app/feature/chats/presentation/chats_screen.dart';
 
 import 'package:walk_dog_app/app/feature/profile/profile_screen.dart';
 import 'package:walk_dog_app/app/feature/moments/moments_screen.dart';
-import 'package:walk_dog_app/app/feature/home/home_screen.dart';
-import 'package:walk_dog_app/app/feature/chats/chats_screen.dart';
+import 'package:walk_dog_app/app/feature/home/presentation/home_screen.dart';
+
 import 'package:walk_dog_app/locale/locale.dart';
 
 class TabsScreen extends StatelessWidget {

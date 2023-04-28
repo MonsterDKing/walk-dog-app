@@ -12,7 +12,9 @@ Map<String, String> english() {
     'signUpButton': 'Sign Up',
     'connectWithFacebook': 'Connect with Facebook',
     'connectWithGoogle': 'Connect with Google',
-    'fullName': 'Full name',
+    'name': 'Name',
+    'lastName': 'Last name',
+
     'phone': 'Cell phone',
     'passsword': 'Password',
     //home

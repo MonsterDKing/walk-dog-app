@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:walk_dog_app/app/feature/onboarding/onboarding_interactor.dart';
 import 'package:walk_dog_app/app/feature/onboarding/onboarding_ui.dart';
-import 'package:walk_dog_app/app/feature/signIn/presentation/sign_in_screen.dart';
+import 'package:walk_dog_app/app/feature/signUp/presentation/sign_up_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -20,11 +20,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> implements Onboardi
 
   @override
   signIn() {
-    context.goNamed(SignInScreen.name);
+    context.goNamed(SignUpScreen.name);
   }
 
   @override
   signUp() {
-    context.goNamed(SignInScreen.name);
+    context.goNamed(SignUpScreen.name);
   }
 }

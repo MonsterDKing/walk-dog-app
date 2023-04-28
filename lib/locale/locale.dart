@@ -63,8 +63,12 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['connectWithGoogle'];
   }
 
-  String? get fullName {
-    return _localizedValues[locale.languageCode]!['fullName'];
+  String? get name {
+    return _localizedValues[locale.languageCode]!['name'];
+  }
+
+  String? get lastName {
+    return _localizedValues[locale.languageCode]!['lastName'];
   }
 
   String? get phone {

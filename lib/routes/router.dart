@@ -30,15 +30,18 @@
 
 import 'package:go_router/go_router.dart';
 import 'package:walk_dog_app/app/feature/book_walk/book_walk_screen.dart';
-import 'package:walk_dog_app/app/feature/chats/chat/chat_screen.dart';
-import 'package:walk_dog_app/app/feature/chats/chats_screen.dart';
+import 'package:walk_dog_app/app/feature/chat/presentation/chat_screen.dart';
+
+import 'package:walk_dog_app/app/feature/chats/presentation/chats_screen.dart';
+
 import 'package:walk_dog_app/app/feature/details/details_screen.dart';
-import 'package:walk_dog_app/app/feature/home/home_screen.dart';
+import 'package:walk_dog_app/app/feature/home/presentation/home_screen.dart';
 import 'package:walk_dog_app/app/feature/moments/moments_screen.dart';
 import 'package:walk_dog_app/app/feature/moments/widgets/moments_story_view.dart';
 import 'package:walk_dog_app/app/feature/onboarding/onboarding_screen.dart';
 import 'package:walk_dog_app/app/feature/profile/profile_screen.dart';
-import 'package:walk_dog_app/app/feature/signIn/presentation/sign_in_screen.dart';
+import 'package:walk_dog_app/app/feature/signUp/presentation/sign_up_screen.dart';
+
 import 'package:walk_dog_app/app/feature/tabs/tabs_screen.dart';
 
 // GoRouter configuration
@@ -98,9 +101,9 @@ final appRouter = GoRouter(
         }),
     GoRoute(
         path: '/sign-in',
-        name: SignInScreen.name,
+        name: SignUpScreen.name,
         builder: (context, state) {
-          return const SignInScreen();
+          return const SignUpScreen();
         }),
 
     GoRoute(

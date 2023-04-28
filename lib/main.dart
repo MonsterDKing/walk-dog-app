@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:walk_dog_app/app/di.dart';
-import 'package:walk_dog_app/app/feature/signIn/providers.dart';
 
+//config
+import 'package:walk_dog_app/theme/style.dart';
 import 'package:walk_dog_app/locale/locale.dart';
+import 'package:walk_dog_app/routes/router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'package:walk_dog_app/theme/style.dart';
-import 'package:walk_dog_app/routes/router.dart';
-
+//inyections
+import 'package:walk_dog_app/app/di.dart';
 import 'package:walk_dog_app/app/blocs/language_cubit.dart';
+import 'package:walk_dog_app/app/feature/home/provider.dart';
+import 'package:walk_dog_app/app/feature/signUp/providers.dart';
 
 void main() async {
   getItSetup();
 
   runApp(MultiBlocProvider(
-    providers: [
-      BlocProvider(create: (context) => LanguageCubit()..getCurrentLanguage()),
-      ...authBlocs,
-    ],
+    providers: [BlocProvider(create: (context) => LanguageCubit()..getCurrentLanguage()), ...signUpBlocs, ...homeBlocs],
     child: const DogWalkingApp(),
   ));
 }
