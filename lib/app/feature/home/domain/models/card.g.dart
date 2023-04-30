@@ -11,7 +11,7 @@ _$_Card _$$_CardFromJson(Map<String, dynamic> json) => _$_Card(
       name: json['name'] as String,
       distance: json['distance'] as String,
       priceXHour: (json['priceXHour'] as num).toDouble(),
-      raiting: (json['raiting'] as num).toDouble(),
+      rating: (json['rating'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$_CardToJson(_$_Card instance) => <String, dynamic>{
@@ -19,5 +19,5 @@ Map<String, dynamic> _$$_CardToJson(_$_Card instance) => <String, dynamic>{
       'name': instance.name,
       'distance': instance.distance,
       'priceXHour': instance.priceXHour,
-      'raiting': instance.raiting,
+      'rating': instance.rating,
     };

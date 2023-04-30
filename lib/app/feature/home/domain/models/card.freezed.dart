@@ -24,7 +24,7 @@ mixin _$Card {
   String get name => throw _privateConstructorUsedError;
   String get distance => throw _privateConstructorUsedError;
   double get priceXHour => throw _privateConstructorUsedError;
-  double get raiting => throw _privateConstructorUsedError;
+  double get rating => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,7 +41,7 @@ abstract class $CardCopyWith<$Res> {
       String name,
       String distance,
       double priceXHour,
-      double raiting});
+      double rating});
 }
 
 /// @nodoc
@@ -61,7 +61,7 @@ class _$CardCopyWithImpl<$Res, $Val extends Card>
     Object? name = null,
     Object? distance = null,
     Object? priceXHour = null,
-    Object? raiting = null,
+    Object? rating = null,
   }) {
     return _then(_value.copyWith(
       image: null == image
@@ -80,9 +80,9 @@ class _$CardCopyWithImpl<$Res, $Val extends Card>
           ? _value.priceXHour
           : priceXHour // ignore: cast_nullable_to_non_nullable
               as double,
-      raiting: null == raiting
-          ? _value.raiting
-          : raiting // ignore: cast_nullable_to_non_nullable
+      rating: null == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
               as double,
     ) as $Val);
   }
@@ -99,7 +99,7 @@ abstract class _$$_CardCopyWith<$Res> implements $CardCopyWith<$Res> {
       String name,
       String distance,
       double priceXHour,
-      double raiting});
+      double rating});
 }
 
 /// @nodoc
@@ -115,7 +115,7 @@ class __$$_CardCopyWithImpl<$Res> extends _$CardCopyWithImpl<$Res, _$_Card>
     Object? name = null,
     Object? distance = null,
     Object? priceXHour = null,
-    Object? raiting = null,
+    Object? rating = null,
   }) {
     return _then(_$_Card(
       image: null == image
@@ -134,9 +134,9 @@ class __$$_CardCopyWithImpl<$Res> extends _$CardCopyWithImpl<$Res, _$_Card>
           ? _value.priceXHour
           : priceXHour // ignore: cast_nullable_to_non_nullable
               as double,
-      raiting: null == raiting
-          ? _value.raiting
-          : raiting // ignore: cast_nullable_to_non_nullable
+      rating: null == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
               as double,
     ));
   }
@@ -150,7 +150,7 @@ class _$_Card implements _Card {
       required this.name,
       required this.distance,
       required this.priceXHour,
-      required this.raiting});
+      required this.rating});
 
   factory _$_Card.fromJson(Map<String, dynamic> json) => _$$_CardFromJson(json);
 
@@ -163,11 +163,11 @@ class _$_Card implements _Card {
   @override
   final double priceXHour;
   @override
-  final double raiting;
+  final double rating;
 
   @override
   String toString() {
-    return 'Card(image: $image, name: $name, distance: $distance, priceXHour: $priceXHour, raiting: $raiting)';
+    return 'Card(image: $image, name: $name, distance: $distance, priceXHour: $priceXHour, rating: $rating)';
   }
 
   @override
@@ -181,13 +181,13 @@ class _$_Card implements _Card {
                 other.distance == distance) &&
             (identical(other.priceXHour, priceXHour) ||
                 other.priceXHour == priceXHour) &&
-            (identical(other.raiting, raiting) || other.raiting == raiting));
+            (identical(other.rating, rating) || other.rating == rating));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, image, name, distance, priceXHour, raiting);
+      Object.hash(runtimeType, image, name, distance, priceXHour, rating);
 
   @JsonKey(ignore: true)
   @override
@@ -209,7 +209,7 @@ abstract class _Card implements Card {
       required final String name,
       required final String distance,
       required final double priceXHour,
-      required final double raiting}) = _$_Card;
+      required final double rating}) = _$_Card;
 
   factory _Card.fromJson(Map<String, dynamic> json) = _$_Card.fromJson;
 
@@ -222,7 +222,7 @@ abstract class _Card implements Card {
   @override
   double get priceXHour;
   @override
-  double get raiting;
+  double get rating;
   @override
   @JsonKey(ignore: true)
   _$$_CardCopyWith<_$_Card> get copyWith => throw _privateConstructorUsedError;

@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
+import 'package:walk_dog_app/app/feature/home/infraestructure/repositories/home_repository_test_imp.dart';
 import 'package:walk_dog_app/app/feature/home/presentation/blocs/top_walkers/top_walkers_bloc.dart';
 import 'package:walk_dog_app/core/api/api_rest_client.dart';
 
@@ -13,15 +14,17 @@ import 'package:walk_dog_app/app/feature/home/infraestructure/repositories/home_
 import 'package:walk_dog_app/app/feature/home/presentation/blocs/near_you/near_you_bloc.dart';
 import 'package:walk_dog_app/app/feature/home/presentation/blocs/suggested/suggested_bloc.dart';
 
-HomeProvider() {
+homeInyections() {
   //inyections for logger
-  GetIt.I.registerLazySingleton<Logger>(() => Logger());
 
   //inyections for HomeRemoteDataSource
   GetIt.I.registerLazySingleton<HomeRemoteDataSource>(() => HomeRemoteDataSourceImp(GetIt.I<ApiRestClient>()));
 
-  //inyections for HomeRepository
-  GetIt.I.registerLazySingleton<HomeRepository>(() => HomeRepositoryImp(GetIt.I<HomeRemoteDataSource>()));
+  //inyections for HomeRepository prod
+  // GetIt.I.registerLazySingleton<HomeRepository>(() => HomeRepositoryImp(GetIt.I<HomeRemoteDataSource>()));
+
+  //inyectiosn for Homerepository test
+  GetIt.I.registerLazySingleton<HomeRepository>(() => HomeRepositoryTestImp(GetIt.I<HomeRemoteDataSource>()));
 
   //inyections for get_near_you_usecase
   GetIt.I.registerLazySingleton<GetNearYourUseCase>(() => GetNearYourUseCase(GetIt.I<HomeRepository>()));

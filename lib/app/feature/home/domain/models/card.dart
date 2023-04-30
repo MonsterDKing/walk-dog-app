@@ -10,7 +10,7 @@ abstract class Card with _$Card {
     required String name,
     required String distance,
     required double priceXHour,
-    required double raiting,
+    required double rating,
   }) = _Card;
 
   factory Card.fromJson(Map<String, dynamic> json) => _$CardFromJson(json);
