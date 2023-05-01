@@ -4,3 +4,4 @@ const cacheAuth = 'CACHED_AUTH';
 const constPolicyResponded = 'POLICY_RESPONDED';
 const tokenKey = 'token';
 const serverErrorMessage = 'Error inesperado, intentalo mas tarde';
+const noInternetErrorMessage = 'No tienes conexion a internet';

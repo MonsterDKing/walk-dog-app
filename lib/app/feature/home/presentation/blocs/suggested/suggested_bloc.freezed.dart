@@ -165,19 +165,22 @@ abstract class _Started implements SuggestedEvent {
 
 /// @nodoc
 mixin _$SuggestedState {
+  SuggestedStatus get status => throw _privateConstructorUsedError;
+  List<CardModel> get cards => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
+    required TResult Function(SuggestedStatus status, List<CardModel> cards)
+        initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
+    TResult? Function(SuggestedStatus status, List<CardModel> cards)? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
+    TResult Function(SuggestedStatus status, List<CardModel> cards)? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -197,6 +200,10 @@ mixin _$SuggestedState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SuggestedStateCopyWith<SuggestedState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -204,6 +211,8 @@ abstract class $SuggestedStateCopyWith<$Res> {
   factory $SuggestedStateCopyWith(
           SuggestedState value, $Res Function(SuggestedState) then) =
       _$SuggestedStateCopyWithImpl<$Res, SuggestedState>;
+  @useResult
+  $Res call({SuggestedStatus status, List<CardModel> cards});
 }
 
 /// @nodoc
@@ -215,13 +224,35 @@ class _$SuggestedStateCopyWithImpl<$Res, $Val extends SuggestedState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? status = null,
+    Object? cards = null,
+  }) {
+    return _then(_value.copyWith(
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SuggestedStatus,
+      cards: null == cards
+          ? _value.cards
+          : cards // ignore: cast_nullable_to_non_nullable
+              as List<CardModel>,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
+abstract class _$$_InitialCopyWith<$Res>
+    implements $SuggestedStateCopyWith<$Res> {
   factory _$$_InitialCopyWith(
           _$_Initial value, $Res Function(_$_Initial) then) =
       __$$_InitialCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({SuggestedStatus status, List<CardModel> cards});
 }
 
 /// @nodoc
@@ -230,51 +261,95 @@ class __$$_InitialCopyWithImpl<$Res>
     implements _$$_InitialCopyWith<$Res> {
   __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? status = null,
+    Object? cards = null,
+  }) {
+    return _then(_$_Initial(
+      null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SuggestedStatus,
+      null == cards
+          ? _value._cards
+          : cards // ignore: cast_nullable_to_non_nullable
+              as List<CardModel>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Initial implements _Initial {
-  const _$_Initial();
+  const _$_Initial(
+      [this.status = SuggestedStatus.initial,
+      final List<CardModel> cards = const []])
+      : _cards = cards;
+
+  @override
+  @JsonKey()
+  final SuggestedStatus status;
+  final List<CardModel> _cards;
+  @override
+  @JsonKey()
+  List<CardModel> get cards {
+    if (_cards is EqualUnmodifiableListView) return _cards;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_cards);
+  }
 
   @override
   String toString() {
-    return 'SuggestedState.initial()';
+    return 'SuggestedState.initial(status: $status, cards: $cards)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType &&
+            other is _$_Initial &&
+            (identical(other.status, status) || other.status == status) &&
+            const DeepCollectionEquality().equals(other._cards, _cards));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType, status, const DeepCollectionEquality().hash(_cards));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
+      __$$_InitialCopyWithImpl<_$_Initial>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
+    required TResult Function(SuggestedStatus status, List<CardModel> cards)
+        initial,
   }) {
-    return initial();
+    return initial(status, cards);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
+    TResult? Function(SuggestedStatus status, List<CardModel> cards)? initial,
   }) {
-    return initial?.call();
+    return initial?.call(status, cards);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
+    TResult Function(SuggestedStatus status, List<CardModel> cards)? initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial();
+      return initial(status, cards);
     }
     return orElse();
   }
@@ -309,5 +384,15 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements SuggestedState {
-  const factory _Initial() = _$_Initial;
+  const factory _Initial(
+      [final SuggestedStatus status, final List<CardModel> cards]) = _$_Initial;
+
+  @override
+  SuggestedStatus get status;
+  @override
+  List<CardModel> get cards;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
+      throw _privateConstructorUsedError;
 }

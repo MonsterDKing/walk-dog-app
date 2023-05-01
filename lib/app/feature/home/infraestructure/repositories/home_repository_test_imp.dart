@@ -1,4 +1,4 @@
-import 'package:walk_dog_app/app/feature/home/domain/models/card.dart';
+import 'package:walk_dog_app/app/feature/home/domain/models/card_model.dart';
 import 'package:dartz/dartz.dart';
 import 'package:walk_dog_app/app/feature/home/domain/repositories/home_repository.dart';
 import 'package:walk_dog_app/app/feature/home/infraestructure/datasource/home_remote_data_source.dart';
@@ -11,23 +11,23 @@ class HomeRepositoryTestImp with HomeRepository {
   HomeRepositoryTestImp(this._homeDataSource);
 
   @override
-  Future<Either<Failure, List<Card>>> nearYou() {
-    List<Card> cards = [
-      Card(
+  Future<Either<Failure, List<CardModel>>> nearYou() async {
+    List<CardModel> cards = [
+      CardModel(
         distance: "10km",
         name: "Test1",
         image: Utils.generateRandomImage(),
         rating: 4.5,
         priceXHour: 150,
       ),
-      Card(
+      CardModel(
         distance: "5km",
         name: "Test2",
         image: Utils.generateRandomImage(),
         rating: 4.0,
         priceXHour: 120,
       ),
-      Card(
+      CardModel(
         distance: "3km",
         name: "Test3",
         image: Utils.generateRandomImage(),
@@ -36,30 +36,29 @@ class HomeRepositoryTestImp with HomeRepository {
       ),
     ];
 
-    return Future.delayed(
-      const Duration(seconds: 5),
-      () => Right(cards),
-    );
+    await Future.delayed(const Duration(seconds: 5));
+
+    return Right(cards);
   }
 
   @override
-  Future<Either<Failure, List<Card>>> suggested() {
-    List<Card> cards = [
-      Card(
+  Future<Either<Failure, List<CardModel>>> suggested() async {
+    List<CardModel> cards = [
+      CardModel(
         distance: "10km",
         name: "Test1",
         image: Utils.generateRandomImage(),
         rating: 4.5,
         priceXHour: 150,
       ),
-      Card(
+      CardModel(
         distance: "5km",
         name: "Test2",
         image: Utils.generateRandomImage(),
         rating: 4.0,
         priceXHour: 120,
       ),
-      Card(
+      CardModel(
         distance: "3km",
         name: "Test3",
         image: Utils.generateRandomImage(),
@@ -68,30 +67,29 @@ class HomeRepositoryTestImp with HomeRepository {
       ),
     ];
 
-    return Future.delayed(
-      const Duration(seconds: 5),
-      () => Right(cards),
-    );
+    await Future.delayed(const Duration(seconds: 5));
+
+    return Right(cards);
   }
 
   @override
-  Future<Either<Failure, List<Card>>> topWalkers() {
-    List<Card> cards = [
-      Card(
+  Future<Either<Failure, List<CardModel>>> topWalkers() async {
+    List<CardModel> cards = [
+      CardModel(
         distance: "10km",
         name: "Test1",
         image: Utils.generateRandomImage(),
         rating: 4.5,
         priceXHour: 150,
       ),
-      Card(
+      CardModel(
         distance: "5km",
         name: "Test2",
         image: Utils.generateRandomImage(),
         rating: 4.0,
         priceXHour: 120,
       ),
-      Card(
+      CardModel(
         distance: "3km",
         name: "Test3",
         image: Utils.generateRandomImage(),
@@ -100,9 +98,8 @@ class HomeRepositoryTestImp with HomeRepository {
       ),
     ];
 
-    return Future.delayed(
-      const Duration(seconds: 5),
-      () => Right(cards),
-    );
+    await Future.delayed(const Duration(seconds: 5));
+
+    return Right(cards);
   }
 }

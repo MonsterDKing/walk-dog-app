@@ -1,11 +1,15 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:walk_dog_app/core/common/utils/utils.dart';
+
+import 'package:walk_dog_app/app/feature/home/domain/models/card_model.dart';
 
 class HomeOptionsWidget extends StatelessWidget {
   const HomeOptionsWidget({
     super.key,
+    required this.cards,
   });
+  final CardModel cards;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,7 @@ class HomeOptionsWidget extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(14),
                         child: Image.network(
-                          Utils.generateRandomImage(),
+                          cards.image,
                           fit: BoxFit.cover,
                           //add border radius
                         ),
@@ -54,7 +58,7 @@ class HomeOptionsWidget extends StatelessWidget {
                           ),
                           //color #FFCB55
                           Text(
-                            '4.1',
+                            cards.rating.toString(),
                             style: GoogleFonts.poppins(
                                 textStyle: const TextStyle(
                                     color: Color.fromRGBO(255, 203, 85, 1), fontWeight: FontWeight.w600, fontSize: 10)),
@@ -70,13 +74,18 @@ class HomeOptionsWidget extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Mason York',
-                      style: GoogleFonts.poppins(
-                          textStyle: const TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 17,
-                      )),
+                    SizedBox(
+                      width: 100,
+                      child: AutoSizeText(
+                        cards.name,
+                        maxLines: 1,
+                        maxFontSize: 17,
+                        minFontSize: 8,
+                        style: GoogleFonts.poppins(
+                            textStyle: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                        )),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -86,12 +95,14 @@ class HomeOptionsWidget extends StatelessWidget {
                           size: 15,
                           color: Color.fromRGBO(0, 0, 0, 0.5),
                         ),
-                        Text(
-                          '7k from you',
+                        AutoSizeText(
+                          cards.distance.toString(),
+                          maxFontSize: 10,
+                          maxLines: 1,
+                          minFontSize: 7,
                           style: GoogleFonts.poppins(
                               textStyle: const TextStyle(
                             fontWeight: FontWeight.w500,
-                            fontSize: 10,
                             color: Color.fromRGBO(0, 0, 0, 0.5),
                           )),
                         )
@@ -101,16 +112,22 @@ class HomeOptionsWidget extends StatelessWidget {
                 ),
                 Container(
                   alignment: Alignment.center,
-                  width: 48,
+                  width: 70,
                   height: 25,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7),
                     color: Colors.black,
                   ),
-                  child: Text(
-                    " \$5/hr",
+                  child: AutoSizeText(
+                    " \$ ${cards.priceXHour} /hr",
+                    maxLines: 1,
+                    minFontSize: 5,
+                    maxFontSize: 10,
                     style: GoogleFonts.poppins(
-                        textStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 10)),
+                        textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    )),
                   ),
                 )
               ],

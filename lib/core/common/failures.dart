@@ -22,6 +22,12 @@ class ServerFailure extends Failure {
   ServerFailure({this.message = serverErrorMessage}) : super(message: message);
 }
 
+class NoInternetFailure extends Failure {
+  final String? message;
+
+  NoInternetFailure({this.message = noInternetErrorMessage}) : super(message: message);
+}
+
 class UnexpectedFailure extends Failure {
   UnexpectedFailure() : super();
 }

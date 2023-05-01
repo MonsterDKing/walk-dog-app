@@ -166,20 +166,21 @@ abstract class _Started implements NearYouEvent {
 /// @nodoc
 mixin _$NearYouState {
   NearYouStatus get status => throw _privateConstructorUsedError;
-  List<Card> get cards => throw _privateConstructorUsedError;
+  List<CardModel> get cards => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(NearYouStatus status, List<Card> cards) initial,
+    required TResult Function(NearYouStatus status, List<CardModel> cards)
+        initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(NearYouStatus status, List<Card> cards)? initial,
+    TResult? Function(NearYouStatus status, List<CardModel> cards)? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(NearYouStatus status, List<Card> cards)? initial,
+    TResult Function(NearYouStatus status, List<CardModel> cards)? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -211,7 +212,7 @@ abstract class $NearYouStateCopyWith<$Res> {
           NearYouState value, $Res Function(NearYouState) then) =
       _$NearYouStateCopyWithImpl<$Res, NearYouState>;
   @useResult
-  $Res call({NearYouStatus status, List<Card> cards});
+  $Res call({NearYouStatus status, List<CardModel> cards});
 }
 
 /// @nodoc
@@ -238,7 +239,7 @@ class _$NearYouStateCopyWithImpl<$Res, $Val extends NearYouState>
       cards: null == cards
           ? _value.cards
           : cards // ignore: cast_nullable_to_non_nullable
-              as List<Card>,
+              as List<CardModel>,
     ) as $Val);
   }
 }
@@ -251,7 +252,7 @@ abstract class _$$_InitialCopyWith<$Res>
       __$$_InitialCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({NearYouStatus status, List<Card> cards});
+  $Res call({NearYouStatus status, List<CardModel> cards});
 }
 
 /// @nodoc
@@ -275,7 +276,7 @@ class __$$_InitialCopyWithImpl<$Res>
       null == cards
           ? _value._cards
           : cards // ignore: cast_nullable_to_non_nullable
-              as List<Card>,
+              as List<CardModel>,
     ));
   }
 }
@@ -284,16 +285,17 @@ class __$$_InitialCopyWithImpl<$Res>
 
 class _$_Initial implements _Initial {
   const _$_Initial(
-      [this.status = NearYouStatus.initial, final List<Card> cards = const []])
+      [this.status = NearYouStatus.initial,
+      final List<CardModel> cards = const []])
       : _cards = cards;
 
   @override
   @JsonKey()
   final NearYouStatus status;
-  final List<Card> _cards;
+  final List<CardModel> _cards;
   @override
   @JsonKey()
-  List<Card> get cards {
+  List<CardModel> get cards {
     if (_cards is EqualUnmodifiableListView) return _cards;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cards);
@@ -326,7 +328,8 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(NearYouStatus status, List<Card> cards) initial,
+    required TResult Function(NearYouStatus status, List<CardModel> cards)
+        initial,
   }) {
     return initial(status, cards);
   }
@@ -334,7 +337,7 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(NearYouStatus status, List<Card> cards)? initial,
+    TResult? Function(NearYouStatus status, List<CardModel> cards)? initial,
   }) {
     return initial?.call(status, cards);
   }
@@ -342,7 +345,7 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(NearYouStatus status, List<Card> cards)? initial,
+    TResult Function(NearYouStatus status, List<CardModel> cards)? initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -381,13 +384,13 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements NearYouState {
-  const factory _Initial([final NearYouStatus status, final List<Card> cards]) =
-      _$_Initial;
+  const factory _Initial(
+      [final NearYouStatus status, final List<CardModel> cards]) = _$_Initial;
 
   @override
   NearYouStatus get status;
   @override
-  List<Card> get cards;
+  List<CardModel> get cards;
   @override
   @JsonKey(ignore: true)
   _$$_InitialCopyWith<_$_Initial> get copyWith =>

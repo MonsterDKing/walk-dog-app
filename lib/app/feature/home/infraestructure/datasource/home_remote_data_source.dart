@@ -14,16 +14,16 @@ class HomeRemoteDataSourceImp with HomeRemoteDataSource {
 
   @override
   Future<APIResult> nearYou() {
-    return _apiRestClient.call(HttpMethod.get, 'near-you');
+    return _apiRestClient.call(HttpMethod.get, 'home/near-you');
   }
 
   @override
   Future<APIResult> suggested() {
-    return _apiRestClient.call(HttpMethod.get, 'suggested');
+    return _apiRestClient.call(HttpMethod.get, 'home/suggested');
   }
 
   @override
   Future<APIResult> topWalkers() {
-    return _apiRestClient.call(HttpMethod.get, 'top-walkers');
+    return _apiRestClient.call(HttpMethod.get, 'home/top-walkers');
   }
 }

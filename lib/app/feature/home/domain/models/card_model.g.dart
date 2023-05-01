@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'card.dart';
+part of 'card_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Card _$$_CardFromJson(Map<String, dynamic> json) => _$_Card(
+_$_CardModel _$$_CardModelFromJson(Map<String, dynamic> json) => _$_CardModel(
       image: json['image'] as String,
       name: json['name'] as String,
       distance: json['distance'] as String,
@@ -14,7 +14,8 @@ _$_Card _$$_CardFromJson(Map<String, dynamic> json) => _$_Card(
       rating: (json['rating'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$_CardToJson(_$_Card instance) => <String, dynamic>{
+Map<String, dynamic> _$$_CardModelToJson(_$_CardModel instance) =>
+    <String, dynamic>{
       'image': instance.image,
       'name': instance.name,
       'distance': instance.distance,
