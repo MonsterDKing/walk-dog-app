@@ -54,6 +54,7 @@ class TabsScreen extends StatelessWidget {
     //function to get only if current path is first directory of path
     bool isCurrentPath() {
       var currentPath = GoRouterState.of(context).location;
+
       switch (currentPath) {
         case '/home':
           return true;
@@ -101,6 +102,6 @@ class TabsScreen extends StatelessWidget {
                   ),
                 ],
               )
-            : SizedBox());
+            : null);
   }
 }

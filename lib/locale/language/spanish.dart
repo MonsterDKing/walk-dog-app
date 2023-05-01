@@ -29,5 +29,8 @@ Map<String, String> spanish() {
     'homeMoments': 'Momentos',
     'homeChat': 'Chat',
     'homeProfile': 'Perfil',
+    //book-walk
+    'bookWalkTitle': 'Reserva tu paseo',
+    'bookWalkSubtitle': 'Cuentanos sobre tu perro',
   };
 }

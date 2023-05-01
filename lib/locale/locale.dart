@@ -123,6 +123,15 @@ class AppLocalizations {
     return _localizedValues[locale.languageCode]!['topWalkers'];
   }
 
+  //book-walk
+  String? get bookWalkTitle {
+    return _localizedValues[locale.languageCode]!['bookWalkTitle'];
+  }
+
+  String? get bookWalkSubtitle {
+    return _localizedValues[locale.languageCode]!['bookWalkSubtitle'];
+  }
+
   static List<Locale> getSupportedLocales() {
     List<Locale> toReturn = [];
     for (String langCode in AppConfig.languagesSupported.keys) {

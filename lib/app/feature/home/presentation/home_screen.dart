@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:walk_dog_app/app/feature/book_walk/presentation/book_walk_screen.dart';
 import 'package:walk_dog_app/app/feature/home/presentation/blocs/bloc.dart';
 
 import 'package:walk_dog_app/app/feature/home/presentation/home_interactor.dart';
@@ -28,5 +30,7 @@ class _HomeScreenState extends State<HomeScreen> implements HomeInteractor {
   }
 
   @override
-  void bookAWalk() {}
+  void bookAWalk() {
+    context.goNamed(BookWalkScreen.name);
+  }
 }

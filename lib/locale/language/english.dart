@@ -30,5 +30,8 @@ Map<String, String> english() {
     'homeMoments': 'Moments',
     'homeChat': 'Chat',
     'homeProfile': 'Profile',
+    //book-walk
+    'bookWalkTitle': 'Book your walk',
+    'bookWalkSubtitle': 'Tell us about your dog',
   };
 }

@@ -1,35 +1,5 @@
-// import 'package:auto_route/auto_route.dart';
-
-// import 'package:walk_dog_app/routes/router.gr.dart';
-
-// @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
-// class AppRouter extends $AppRouter {
-//   @override
-//   final List<AutoRoute> routes = [
-//     AutoRoute(
-//       path: '/',
-//       page: OnboardingScreen.page,
-//     ),
-//     AutoRoute(page: SignInScreen.page),
-//     AutoRoute(page: TabsScreen.page, children: [
-//       AutoRoute(page: HomeScreen.page),
-//       AutoRoute(page: MomentsScreen.page),
-//       AutoRoute(page: ProfileScreen.page),
-//       AutoRoute(
-//         page: ChatsScreen.page,
-//         children: [
-//           AutoRoute(page: ChatScreen.page),
-//         ],
-//       ),
-//     ]),
-//     AutoRoute(page: MomentsStoryView.page),
-//     AutoRoute(page: DetailsScreen.page),
-//     AutoRoute(page: BookWalkScreen.page)
-//   ];
-// }
-
 import 'package:go_router/go_router.dart';
-import 'package:walk_dog_app/app/feature/book_walk/book_walk_screen.dart';
+import 'package:walk_dog_app/app/feature/book_walk/presentation/book_walk_screen.dart';
 import 'package:walk_dog_app/app/feature/chat/presentation/chat_screen.dart';
 
 import 'package:walk_dog_app/app/feature/chats/presentation/chats_screen.dart';
@@ -57,6 +27,14 @@ final appRouter = GoRouter(
         GoRoute(
             path: '/home',
             name: HomeScreen.name,
+            routes: [
+              GoRoute(
+                  path: 'book-walk',
+                  name: BookWalkScreen.name,
+                  builder: (context, state) {
+                    return const BookWalkScreen();
+                  }),
+            ],
             builder: (context, state) {
               return const HomeScreen();
             }),
@@ -120,11 +98,5 @@ final appRouter = GoRouter(
         return const DetailsScreen();
       },
     ),
-    GoRoute(
-        path: '/book-walk',
-        name: BookWalkScreen.name,
-        builder: (context, state) {
-          return const BookWalkScreen();
-        }),
   ],
 );

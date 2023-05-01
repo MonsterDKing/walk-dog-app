@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:walk_dog_app/app/feature/book_walk/book_walk_interactor.dart';
-import 'package:walk_dog_app/app/feature/book_walk/book_walk_ui.dart';
+import 'package:walk_dog_app/app/feature/book_walk/presentation/book_walk_interactor.dart';
+import 'package:walk_dog_app/app/feature/book_walk/presentation/book_walk_ui.dart';
 
 class BookWalkScreen extends StatefulWidget {
   const BookWalkScreen({super.key});
