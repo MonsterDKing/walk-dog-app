@@ -19,32 +19,38 @@ mixin _$TopWalkersEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() loadMore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? loadMore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? loadMore,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_LoadMore value) loadMore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_LoadMore value)? loadMore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_LoadMore value)? loadMore,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -106,6 +112,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() loadMore,
   }) {
     return started();
   }
@@ -114,6 +121,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
+    TResult? Function()? loadMore,
   }) {
     return started?.call();
   }
@@ -122,6 +130,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? loadMore,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -134,6 +143,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_LoadMore value) loadMore,
   }) {
     return started(this);
   }
@@ -142,6 +152,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_LoadMore value)? loadMore,
   }) {
     return started?.call(this);
   }
@@ -150,6 +161,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_LoadMore value)? loadMore,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -161,6 +173,108 @@ class _$_Started implements _Started {
 
 abstract class _Started implements TopWalkersEvent {
   const factory _Started() = _$_Started;
+}
+
+/// @nodoc
+abstract class _$$_LoadMoreCopyWith<$Res> {
+  factory _$$_LoadMoreCopyWith(
+          _$_LoadMore value, $Res Function(_$_LoadMore) then) =
+      __$$_LoadMoreCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LoadMoreCopyWithImpl<$Res>
+    extends _$TopWalkersEventCopyWithImpl<$Res, _$_LoadMore>
+    implements _$$_LoadMoreCopyWith<$Res> {
+  __$$_LoadMoreCopyWithImpl(
+      _$_LoadMore _value, $Res Function(_$_LoadMore) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_LoadMore implements _LoadMore {
+  const _$_LoadMore();
+
+  @override
+  String toString() {
+    return 'TopWalkersEvent.loadMore()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadMore);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() loadMore,
+  }) {
+    return loadMore();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? loadMore,
+  }) {
+    return loadMore?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? loadMore,
+    required TResult orElse(),
+  }) {
+    if (loadMore != null) {
+      return loadMore();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_LoadMore value) loadMore,
+  }) {
+    return loadMore(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_LoadMore value)? loadMore,
+  }) {
+    return loadMore?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_LoadMore value)? loadMore,
+    required TResult orElse(),
+  }) {
+    if (loadMore != null) {
+      return loadMore(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadMore implements TopWalkersEvent {
+  const factory _LoadMore() = _$_LoadMore;
 }
 
 /// @nodoc

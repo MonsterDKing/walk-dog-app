@@ -102,4 +102,35 @@ class HomeRepositoryTestImp with HomeRepository {
 
     return Right(cards);
   }
+
+  @override
+  Future<Either<Failure, List<CardModel>>> loadMoreTopWalkers() async {
+    List<CardModel> cards = [
+      CardModel(
+        distance: "10km",
+        name: "Test1",
+        image: Utils.generateRandomImage(),
+        rating: 4.5,
+        priceXHour: 150,
+      ),
+      CardModel(
+        distance: "5km",
+        name: "Test2",
+        image: Utils.generateRandomImage(),
+        rating: 4.0,
+        priceXHour: 120,
+      ),
+      CardModel(
+        distance: "3km",
+        name: "Test3",
+        image: Utils.generateRandomImage(),
+        rating: 4.8,
+        priceXHour: 200,
+      ),
+    ];
+
+    await Future.delayed(const Duration(seconds: 5));
+
+    return Right(cards);
+  }
 }

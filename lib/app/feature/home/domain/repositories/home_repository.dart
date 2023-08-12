@@ -6,4 +6,5 @@ abstract class HomeRepository {
   Future<Either<Failure, List<CardModel>>> nearYou();
   Future<Either<Failure, List<CardModel>>> suggested();
   Future<Either<Failure, List<CardModel>>> topWalkers();
+  Future<Either<Failure, List<CardModel>>> loadMoreTopWalkers();
 }

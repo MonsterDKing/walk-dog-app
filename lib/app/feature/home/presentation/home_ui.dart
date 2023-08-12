@@ -33,7 +33,9 @@ class HomeUI extends StatelessWidget {
             HomeSubTitle(
               text: locale.topWalkers!,
             ),
-            const TopWalkersWidget(),
+            TopWalkersWidget(
+              interactor: interactor,
+            ),
             const SizedBox(
               height: 10,
             ),
@@ -60,10 +62,37 @@ class HomeUI extends StatelessWidget {
   }
 }
 
-class TopWalkersWidget extends StatelessWidget {
+class TopWalkersWidget extends StatefulWidget {
   const TopWalkersWidget({
     super.key,
+    required this.interactor,
   });
+  final HomeInteractor interactor;
+  @override
+  State<TopWalkersWidget> createState() => _TopWalkersWidgetState();
+}
+
+class _TopWalkersWidgetState extends State<TopWalkersWidget> {
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    _scrollController.addListener(updateList);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  //add listener to check if the user has reached the end of the listview
+  updateList() {
+    if (_scrollController.position.pixels == _scrollController.position.maxScrollExtent) {
+      widget.interactor.loadMoreTopWalkers();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +110,7 @@ class TopWalkersWidget extends StatelessWidget {
               case TopWalkersStatus.loaded:
                 return ListView.builder(
                   shrinkWrap: true,
+                  controller: _scrollController,
                   scrollDirection: Axis.horizontal,
                   itemCount: state.cards.length,
                   itemBuilder: (BuildContext context, int index) {
