@@ -2,6 +2,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
+import 'package:walk_dog_app/app/feature/home/domain/usescases/get_load_more_top_walker.dart';
 // import 'package:walk_dog_app/app/feature/home/infraestructure/repositories/home_repository_test_imp.dart';
 import 'package:walk_dog_app/app/feature/home/presentation/blocs/top_walkers/top_walkers_bloc.dart';
 import 'package:walk_dog_app/core/api/api_rest_client.dart';
@@ -40,6 +41,9 @@ homeInyections() {
   //inyection for get_top_walkers
   GetIt.I.registerLazySingleton<GetTopWalkersUseCase>(() => GetTopWalkersUseCase(GetIt.I<HomeRepository>()));
 
+  //inyection for get_load_more_top_walkers
+  GetIt.I.registerLazySingleton<GetLoadMoreTopWalkers>(() => GetLoadMoreTopWalkers(GetIt.I<HomeRepository>()));
+
   //inyection for near_you_bloc
   GetIt.I.registerLazySingleton<NearYouBloc>(
     () => NearYouBloc(
@@ -61,6 +65,7 @@ homeInyections() {
     () => TopWalkersBloc(
       GetIt.I<GetTopWalkersUseCase>(),
       GetIt.I<Logger>(),
+      GetIt.I<GetLoadMoreTopWalkers>(),
     ),
   );
 }

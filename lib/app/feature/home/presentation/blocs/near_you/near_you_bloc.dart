@@ -22,7 +22,7 @@ class NearYouBloc extends Bloc<NearYouEvent, NearYouState> {
     });
   }
 
-  Future<void> _started(NearYouEvent event, Emitter<NearYouState> emit) async {
+  _started(NearYouEvent event, Emitter<NearYouState> emit) async {
     logger.i('NearYouBloc started');
     emit(state.copyWith(status: NearYouStatus.loading));
     final result = await getNearYourUseCase.call();

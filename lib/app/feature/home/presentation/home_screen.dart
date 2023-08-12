@@ -33,4 +33,9 @@ class _HomeScreenState extends State<HomeScreen> implements HomeInteractor {
   void bookAWalk() {
     context.goNamed(BookWalkScreen.name);
   }
+
+  @override
+  void loadMoreTopWalkers() {
+    BlocProvider.of<TopWalkersBloc>(context).add(const TopWalkersEvent.loadMore());
+  }
 }
