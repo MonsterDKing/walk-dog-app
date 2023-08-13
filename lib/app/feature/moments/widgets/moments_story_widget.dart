@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:walk_dog_app/core/common/utils/utils.dart';
 

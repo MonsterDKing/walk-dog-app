@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
 import 'package:walk_dog_app/app/feature/home/domain/usescases/get_load_more_top_walker.dart';
@@ -11,6 +12,7 @@ part 'top_walkers_event.dart';
 part 'top_walkers_state.dart';
 part 'top_walkers_bloc.freezed.dart';
 
+@Injectable()
 class TopWalkersBloc extends Bloc<TopWalkersEvent, TopWalkersState> {
   final GetTopWalkersUseCase getTopWalkersUseCase;
   final GetLoadMoreTopWalkers getLoadMoreTopWalkers;

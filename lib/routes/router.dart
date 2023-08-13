@@ -1,3 +1,5 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:walk_dog_app/app/feature/book_walk/presentation/book_walk_screen.dart';
 import 'package:walk_dog_app/app/feature/chat/presentation/chat_screen.dart';
@@ -5,11 +7,13 @@ import 'package:walk_dog_app/app/feature/chat/presentation/chat_screen.dart';
 import 'package:walk_dog_app/app/feature/chats/presentation/chats_screen.dart';
 
 import 'package:walk_dog_app/app/feature/details/details_screen.dart';
+import 'package:walk_dog_app/app/feature/home/presentation/blocs/bloc.dart';
 import 'package:walk_dog_app/app/feature/home/presentation/home_screen.dart';
 import 'package:walk_dog_app/app/feature/moments/moments_screen.dart';
 import 'package:walk_dog_app/app/feature/moments/widgets/moments_story_view.dart';
 import 'package:walk_dog_app/app/feature/onboarding/onboarding_screen.dart';
 import 'package:walk_dog_app/app/feature/profile/profile_screen.dart';
+import 'package:walk_dog_app/app/feature/signUp/presentation/blocs/sign_up/sign_up_bloc.dart';
 import 'package:walk_dog_app/app/feature/signUp/presentation/sign_up_screen.dart';
 
 import 'package:walk_dog_app/app/feature/tabs/tabs_screen.dart';
@@ -21,7 +25,11 @@ final appRouter = GoRouter(
     //sshell router
     ShellRoute(
       builder: (context, state, child) {
-        return TabsScreen(children: child);
+        return MultiBlocProvider(providers: [
+          BlocProvider(create: (context) => GetIt.instance.get<NearYouBloc>()),
+          BlocProvider(create: (context) => GetIt.instance.get<TopWalkersBloc>()),
+          BlocProvider(create: (context) => GetIt.instance.get<SuggestedBloc>()),
+        ], child: TabsScreen(children: child));
       },
       routes: [
         GoRoute(
@@ -81,7 +89,7 @@ final appRouter = GoRouter(
         path: '/sign-in',
         name: SignUpScreen.name,
         builder: (context, state) {
-          return const SignUpScreen();
+          return BlocProvider(create: (context) => GetIt.instance.get<SignUpBloc>(), child: const SignUpScreen());
         }),
 
     GoRoute(

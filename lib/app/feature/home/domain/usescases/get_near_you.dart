@@ -1,8 +1,10 @@
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import 'package:walk_dog_app/app/feature/home/domain/models/card_model.dart';
 import 'package:walk_dog_app/app/feature/home/domain/repositories/home_repository.dart';
 import 'package:walk_dog_app/core/common/failures.dart';
 
+@Injectable()
 class GetNearYourUseCase {
   final HomeRepository _homeRepository;
 

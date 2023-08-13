@@ -1,6 +1,8 @@
+import 'package:injectable/injectable.dart';
 import 'package:walk_dog_app/app/feature/signUp/domain/repositories/sign_up_repository.dart';
 import 'package:walk_dog_app/app/feature/signUp/infraestructure/datasources/sign_up_remote_data_source.dart';
 
+@Injectable(as: SignUpRepository)
 class SignUpRepositoryImp implements SignUpRepository {
   SignUpRemoteDataSource signUpRemoteDataSource;
 

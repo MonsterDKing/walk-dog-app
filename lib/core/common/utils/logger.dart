@@ -1,5 +1,7 @@
+import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
+@Injectable()
 class LoggerPrinter extends LogPrinter {
   LoggerPrinter(
     this.className,

@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:walk_dog_app/core/api/api_rest_client.dart';
 import 'package:walk_dog_app/core/api/api_rest_result.dart';
 
@@ -12,6 +13,7 @@ abstract class SignUpRemoteDataSource {
   Future<void> signUpGoogle();
 }
 
+@Injectable(as: SignUpRemoteDataSource)
 class SignUpRemoteDataSourceImp implements SignUpRemoteDataSource {
   final ApiRestClient apiRestClient;
 

@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:walk_dog_app/core/api/api_rest_client.dart';
 import 'package:walk_dog_app/core/api/api_rest_result.dart';
 
@@ -7,6 +8,7 @@ abstract class HomeRemoteDataSource {
   Future<APIResult> suggested();
 }
 
+@Injectable(as: HomeRemoteDataSource)
 class HomeRemoteDataSourceImp with HomeRemoteDataSource {
   final ApiRestClient _apiRestClient;
 

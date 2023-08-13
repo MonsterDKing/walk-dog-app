@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 import 'package:walk_dog_app/app/feature/signUp/domain/usescase/sign_up_normal_reigster.dart';
 import 'package:walk_dog_app/core/inputs/index.dart';
@@ -9,6 +10,7 @@ part 'sign_up_event.dart';
 part 'sign_up_state.dart';
 part 'sign_up_bloc.freezed.dart';
 
+@Injectable()
 class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   SignUpNormalRegisterUseCase signUpNormalRegisterUsecase;
   Logger logger;

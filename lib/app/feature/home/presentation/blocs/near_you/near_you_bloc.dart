@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
 import 'package:walk_dog_app/app/feature/home/domain/usescases/get_near_you.dart';
@@ -10,6 +11,7 @@ part 'near_you_event.dart';
 part 'near_you_state.dart';
 part 'near_you_bloc.freezed.dart';
 
+@Injectable()
 class NearYouBloc extends Bloc<NearYouEvent, NearYouState> {
   final GetNearYourUseCase getNearYourUseCase;
   final Logger logger;

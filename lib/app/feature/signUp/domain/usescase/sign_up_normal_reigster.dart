@@ -1,8 +1,10 @@
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import 'package:walk_dog_app/app/feature/signUp/domain/repositories/sign_up_repository.dart';
 import 'package:walk_dog_app/core/api/api_rest_result.dart';
 import 'package:walk_dog_app/core/common/failures.dart';
 
+@Injectable()
 class SignUpNormalRegisterUseCase {
   final SignUpRepository repository;
 

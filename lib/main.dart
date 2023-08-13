@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
+import 'package:walk_dog_app/app/blocs/language_cubit.dart';
 
 //config
 import 'package:walk_dog_app/theme/style.dart';
@@ -9,18 +11,16 @@ import 'package:walk_dog_app/routes/router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 //inyections
-import 'package:walk_dog_app/app/di.dart';
-import 'package:walk_dog_app/app/blocs/language_cubit.dart';
-import 'package:walk_dog_app/app/feature/home/provider.dart';
-import 'package:walk_dog_app/app/feature/signUp/providers.dart';
+
+import 'app/di_injectable.dart';
 
 void main() async {
-  getItSetup();
+  // getItSetup();
+  configureDependencies();
 
-  runApp(MultiBlocProvider(
-    providers: [BlocProvider(create: (context) => LanguageCubit()..getCurrentLanguage()), ...signUpBlocs, ...homeBlocs],
-    child: const DogWalkingApp(),
-  ));
+  runApp(MultiBlocProvider(providers: [
+    BlocProvider(create: (context) => GetIt.instance.get<LanguageCubit>()..getCurrentLanguage()),
+  ], child: const DogWalkingApp()));
 }
 
 class DogWalkingApp extends StatefulWidget {

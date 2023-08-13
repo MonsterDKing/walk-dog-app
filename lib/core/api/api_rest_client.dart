@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_flavor/flutter_flavor.dart';
+import 'package:injectable/injectable.dart';
 
 import 'api_rest_result.dart';
 import 'interceptors/accept_header_interceptor.dart';
@@ -30,6 +30,7 @@ abstract class ApiRestClient {
   });
 }
 
+@Injectable(as: ApiRestClient)
 class ApiRestClientImpl implements ApiRestClient {
   final Dio _httpClient;
 

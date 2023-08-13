@@ -118,8 +118,8 @@ class _TopWalkersWidgetState extends State<TopWalkersWidget> {
                   },
                 );
               case TopWalkersStatus.error:
-                return Column(
-                  children: const [
+                return const Column(
+                  children: [
                     Center(child: Text(serverErrorMessage)),
                   ],
                 );
@@ -168,8 +168,8 @@ class SuggestedWidget extends StatelessWidget {
                   },
                 );
               case SuggestedStatus.error:
-                return Column(
-                  children: const [
+                return const Column(
+                  children: [
                     Center(child: Text(serverErrorMessage)),
                   ],
                 );
@@ -218,8 +218,8 @@ class NearYouWidget extends StatelessWidget {
                   },
                 );
               case NearYouStatus.error:
-                return Column(
-                  children: const [
+                return const Column(
+                  children: [
                     Center(child: Text(serverErrorMessage)),
                   ],
                 );
