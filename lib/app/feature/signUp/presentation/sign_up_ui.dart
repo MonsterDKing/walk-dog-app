@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:walk_dog_app/app/feature/onboarding/onboarding_screen.dart';
 import 'package:walk_dog_app/app/feature/signUp/presentation/blocs/sign_up/sign_up_bloc.dart';
 
 //components
@@ -47,11 +48,11 @@ class SignUpLoadingBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const SizedBox(
+    return const Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      SizedBox(
         height: 50,
       ),
-      const Center(
+      Center(
         child: CircularProgressIndicator(),
       ),
     ]);
@@ -75,8 +76,7 @@ class SignUpBody extends StatelessWidget {
           padding: EdgeInsets.zero,
           constraints: const BoxConstraints(),
           onPressed: () {
-            context.pop();
-            //todo context pop go
+            context.goNamed(OnboardingScreen.name);
           },
           icon: const Icon(Icons.arrow_back)),
       const SizedBox(

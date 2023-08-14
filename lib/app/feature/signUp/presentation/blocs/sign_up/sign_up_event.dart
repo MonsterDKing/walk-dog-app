@@ -9,4 +9,5 @@ class SignUpEvent with _$SignUpEvent {
   const factory SignUpEvent.signUp() = _SignUp;
   const factory SignUpEvent.facebookSignUp() = _FacebookSignUp;
   const factory SignUpEvent.googleSignUp() = _GoogleSignUp;
+  const factory SignUpEvent.closeSnackBar() = _CloseSnackBar;
 }

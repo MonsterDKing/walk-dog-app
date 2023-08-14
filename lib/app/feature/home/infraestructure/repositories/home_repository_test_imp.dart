@@ -6,7 +6,7 @@ import 'package:walk_dog_app/app/feature/home/infraestructure/datasource/home_re
 import 'package:walk_dog_app/core/common/failures.dart';
 import 'package:walk_dog_app/core/common/utils/utils.dart';
 
-@Injectable(as: HomeRepository)
+// @Injectable(as: HomeRepository)
 class HomeRepositoryTestImp with HomeRepository {
   final HomeRemoteDataSource _homeDataSource;
 

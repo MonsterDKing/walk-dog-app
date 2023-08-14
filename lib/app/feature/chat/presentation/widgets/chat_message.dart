@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MessageWidget extends StatelessWidget {
   final List<String> messages;
 
-  const MessageWidget({required this.messages});
+  const MessageWidget({super.key,required this.messages});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,6 @@ class MessageWidget extends StatelessWidget {
       itemCount: messages.length,
       shrinkWrap: true,
       itemBuilder: (BuildContext context, int index) {
-        // Decide si el mensaje debe mostrarse a la izquierda o a la derecha
         bool isMe = index % 2 == 0;
 
         return Column(

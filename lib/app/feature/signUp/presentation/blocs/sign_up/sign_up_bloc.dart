@@ -15,7 +15,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   SignUpNormalRegisterUseCase signUpNormalRegisterUsecase;
   Logger logger;
 
-  SignUpBloc(this.signUpNormalRegisterUsecase, this.logger) : super(_Initial()) {
+  SignUpBloc(this.signUpNormalRegisterUsecase, this.logger) : super(const _Initial()) {
     on<SignUpEvent>((event, emit) async {
       await event.map(
         nameChanged: (event) async => await _nameChanged(event, emit),
@@ -25,6 +25,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
         signUp: (event) async => await _signUp(event, emit),
         facebookSignUp: (event) async => await _facebookSignUp(event, emit),
         googleSignUp: (event) async => await _googleSignUp(event, emit),
+        closeSnackBar: (evemt) async => await _closeSnackBar(event, emit),
       );
     });
   }
@@ -62,6 +63,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
     logger.i(event);
     if (!state.isValid) {
       logger.i('invalid form');
+      emit(state.copyWith(isValid: false, status: RegisterStatusEnum.failure));
       return;
     }
     emit(state.copyWith(status: RegisterStatusEnum.loading));
@@ -73,7 +75,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
     //resp fold
     resp.fold(
-      (left) => logger.e(left),
+      (left) => emit(state.copyWith(isValid: false, status: RegisterStatusEnum.failure)),
       (right) => emit(state.copyWith(status: RegisterStatusEnum.success)),
     );
   }
@@ -84,5 +86,12 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
   _googleSignUp(event, Emitter<SignUpState> emit) {
     logger.i(event);
+  }
+
+  _closeSnackBar(SignUpEvent event, Emitter<SignUpState> emit) {
+    logger.i(event);
+    emit(state.copyWith(
+      status: RegisterStatusEnum.initial,
+    ));
   }
 }

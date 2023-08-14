@@ -26,10 +26,17 @@ class _SignUpScreenState extends State<SignUpScreen> implements SignUpInteractor
             context.goNamed(HomeScreen.name);
           } else if (state.status == RegisterStatusEnum.failure) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text("ocurrio un problema inesperado intentalo mas tarde"),
-                backgroundColor: Colors.red,
-              ),
+              SnackBar(
+                  content: const Text("ocurrio un problema inesperado intentalo mas tarde"),
+                  backgroundColor: Colors.red,
+                  duration: const Duration(days: 1),
+                  action: SnackBarAction(
+                    label: "cerrar",
+                    textColor: Colors.white,
+                    onPressed: () {
+                      context.read<SignUpBloc>().add(const SignUpEvent.closeSnackBar());
+                    },
+                  )),
             );
           }
         },
@@ -47,8 +54,6 @@ class _SignUpScreenState extends State<SignUpScreen> implements SignUpInteractor
   @override
   Future<void> signIn() async {
     context.read<SignUpBloc>().add(const SignUpEvent.signUp());
-
-    // context.goNamed(HomeScreen.name);
   }
 
   @override

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:walk_dog_app/app/assets/assets.dart';
 import 'package:walk_dog_app/locale/locale.dart';
 import 'package:walk_dog_app/app/feature/onboarding/onboarding_interactor.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingUI extends StatelessWidget {
   const OnboardingUI({super.key, required this.interactor});
@@ -11,8 +12,8 @@ class OnboardingUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     var locale = AppLocalizations.of(context)!;
+    final themeData = Theme.of(context);
 
     return Scaffold(
         body: SizedBox(
@@ -24,8 +25,8 @@ class OnboardingUI extends StatelessWidget {
             child: Container(color: Colors.black),
           ),
           Container(
-              height: size.height * 0.7,
-              width: size.width,
+              height: 0.7.sh,
+              width: 1.sw,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(Assets.onboardingImage),
@@ -48,42 +49,30 @@ class OnboardingUI extends StatelessWidget {
                 )),
               )),
           Positioned.fill(
-            top: size.height * 0.35,
+            top: 0.35.sh,
             child: Align(
               alignment: Alignment.center,
-              child: Text(
-                locale.onboardingTitle!,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 22,
-                ),
-              ),
+              child: Text(locale.onboardingTitle!,
+                  style: themeData.textTheme.titleLarge!.copyWith(fontSize: 22.sp, color: Colors.white)),
             ),
           ),
           Positioned.fill(
-            top: size.height * 0.45,
+            top: 0.45.sh,
             child: Align(
               alignment: Alignment.center,
               child: Text(locale.onboardingButton!,
-                  style: GoogleFonts.poppins(
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 22,
-                    ),
-                  )),
+                  style: themeData.textTheme.titleLarge!.copyWith(fontSize: 22.sp, color: Colors.white)),
             ),
           ),
           Positioned(
-            top: size.height * 0.75,
-            left: size.width * 0.5 - 162,
+            top: 0.75.sh,
+            left: 1.sw * 0.5 - 162,
             child: Container(
-              margin: const EdgeInsets.symmetric(vertical: 22),
-              width: 324,
-              height: 58,
+              margin: EdgeInsets.symmetric(vertical: 22.w),
+              width: 324.w,
+              height: 58.h,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(14.r),
                 gradient: const LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -98,21 +87,17 @@ class OnboardingUI extends StatelessWidget {
                   interactor.signIn();
                 },
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(14.r),
                 ),
                 child: Text(locale.joinOurCommunity!,
-                    style: GoogleFonts.poppins(
-                      textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    style: themeData.textTheme.titleMedium!.copyWith(
+                      color: Colors.white,
                     )),
               ),
             ),
           ),
           Positioned.fill(
-            bottom: size.height * 0.1,
+            bottom: 0.1.sh,
             child: Align(
               alignment: Alignment.bottomCenter,
               child: RichText(

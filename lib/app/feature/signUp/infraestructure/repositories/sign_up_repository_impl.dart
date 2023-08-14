@@ -11,7 +11,7 @@ class SignUpRepositoryImp implements SignUpRepository {
   @override
   Future<Object> signUp(
       {required String name, required String lastName, required String cellPhone, required String password}) async {
-    final res = await this.signUpRemoteDataSource.signUp(
+    final res = await signUpRemoteDataSource.signUp(
           name: name,
           lastName: lastName,
           cellPhone: cellPhone,

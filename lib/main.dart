@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:walk_dog_app/app/blocs/language_cubit.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //config
 import 'package:walk_dog_app/theme/style.dart';
@@ -18,9 +19,16 @@ void main() async {
   // getItSetup();
   configureDependencies();
 
-  runApp(MultiBlocProvider(providers: [
-    BlocProvider(create: (context) => GetIt.instance.get<LanguageCubit>()..getCurrentLanguage()),
-  ], child: const DogWalkingApp()));
+  runApp(MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => GetIt.instance.get<LanguageCubit>()..getCurrentLanguage()),
+      ],
+      child: ScreenUtilInit(
+        designSize: const Size(430, 932),
+        builder: ((context, child) {
+          return const DogWalkingApp();
+        }),
+      )));
 }
 
 class DogWalkingApp extends StatefulWidget {

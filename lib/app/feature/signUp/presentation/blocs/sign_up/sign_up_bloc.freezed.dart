@@ -25,6 +25,7 @@ mixin _$SignUpEvent {
     required TResult Function() signUp,
     required TResult Function() facebookSignUp,
     required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +37,7 @@ mixin _$SignUpEvent {
     TResult? Function()? signUp,
     TResult? Function()? facebookSignUp,
     TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +49,7 @@ mixin _$SignUpEvent {
     TResult Function()? signUp,
     TResult Function()? facebookSignUp,
     TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +62,7 @@ mixin _$SignUpEvent {
     required TResult Function(_SignUp value) signUp,
     required TResult Function(_FacebookSignUp value) facebookSignUp,
     required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +74,7 @@ mixin _$SignUpEvent {
     TResult? Function(_SignUp value)? signUp,
     TResult? Function(_FacebookSignUp value)? facebookSignUp,
     TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +86,7 @@ mixin _$SignUpEvent {
     TResult Function(_SignUp value)? signUp,
     TResult Function(_FacebookSignUp value)? facebookSignUp,
     TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -175,6 +181,7 @@ class _$_NameChanged implements _NameChanged {
     required TResult Function() signUp,
     required TResult Function() facebookSignUp,
     required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
   }) {
     return nameChanged(name);
   }
@@ -189,6 +196,7 @@ class _$_NameChanged implements _NameChanged {
     TResult? Function()? signUp,
     TResult? Function()? facebookSignUp,
     TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
   }) {
     return nameChanged?.call(name);
   }
@@ -203,6 +211,7 @@ class _$_NameChanged implements _NameChanged {
     TResult Function()? signUp,
     TResult Function()? facebookSignUp,
     TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -221,6 +230,7 @@ class _$_NameChanged implements _NameChanged {
     required TResult Function(_SignUp value) signUp,
     required TResult Function(_FacebookSignUp value) facebookSignUp,
     required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
   }) {
     return nameChanged(this);
   }
@@ -235,6 +245,7 @@ class _$_NameChanged implements _NameChanged {
     TResult? Function(_SignUp value)? signUp,
     TResult? Function(_FacebookSignUp value)? facebookSignUp,
     TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
   }) {
     return nameChanged?.call(this);
   }
@@ -249,6 +260,7 @@ class _$_NameChanged implements _NameChanged {
     TResult Function(_SignUp value)? signUp,
     TResult Function(_FacebookSignUp value)? facebookSignUp,
     TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -339,6 +351,7 @@ class _$_LastNameChanged implements _LastNameChanged {
     required TResult Function() signUp,
     required TResult Function() facebookSignUp,
     required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
   }) {
     return lastNameChanged(lastName);
   }
@@ -353,6 +366,7 @@ class _$_LastNameChanged implements _LastNameChanged {
     TResult? Function()? signUp,
     TResult? Function()? facebookSignUp,
     TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
   }) {
     return lastNameChanged?.call(lastName);
   }
@@ -367,6 +381,7 @@ class _$_LastNameChanged implements _LastNameChanged {
     TResult Function()? signUp,
     TResult Function()? facebookSignUp,
     TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
     required TResult orElse(),
   }) {
     if (lastNameChanged != null) {
@@ -385,6 +400,7 @@ class _$_LastNameChanged implements _LastNameChanged {
     required TResult Function(_SignUp value) signUp,
     required TResult Function(_FacebookSignUp value) facebookSignUp,
     required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
   }) {
     return lastNameChanged(this);
   }
@@ -399,6 +415,7 @@ class _$_LastNameChanged implements _LastNameChanged {
     TResult? Function(_SignUp value)? signUp,
     TResult? Function(_FacebookSignUp value)? facebookSignUp,
     TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
   }) {
     return lastNameChanged?.call(this);
   }
@@ -413,6 +430,7 @@ class _$_LastNameChanged implements _LastNameChanged {
     TResult Function(_SignUp value)? signUp,
     TResult Function(_FacebookSignUp value)? facebookSignUp,
     TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
     required TResult orElse(),
   }) {
     if (lastNameChanged != null) {
@@ -503,6 +521,7 @@ class _$_CellphoneChanged implements _CellphoneChanged {
     required TResult Function() signUp,
     required TResult Function() facebookSignUp,
     required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
   }) {
     return cellphoneChanged(cellphone);
   }
@@ -517,6 +536,7 @@ class _$_CellphoneChanged implements _CellphoneChanged {
     TResult? Function()? signUp,
     TResult? Function()? facebookSignUp,
     TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
   }) {
     return cellphoneChanged?.call(cellphone);
   }
@@ -531,6 +551,7 @@ class _$_CellphoneChanged implements _CellphoneChanged {
     TResult Function()? signUp,
     TResult Function()? facebookSignUp,
     TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
     required TResult orElse(),
   }) {
     if (cellphoneChanged != null) {
@@ -549,6 +570,7 @@ class _$_CellphoneChanged implements _CellphoneChanged {
     required TResult Function(_SignUp value) signUp,
     required TResult Function(_FacebookSignUp value) facebookSignUp,
     required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
   }) {
     return cellphoneChanged(this);
   }
@@ -563,6 +585,7 @@ class _$_CellphoneChanged implements _CellphoneChanged {
     TResult? Function(_SignUp value)? signUp,
     TResult? Function(_FacebookSignUp value)? facebookSignUp,
     TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
   }) {
     return cellphoneChanged?.call(this);
   }
@@ -577,6 +600,7 @@ class _$_CellphoneChanged implements _CellphoneChanged {
     TResult Function(_SignUp value)? signUp,
     TResult Function(_FacebookSignUp value)? facebookSignUp,
     TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
     required TResult orElse(),
   }) {
     if (cellphoneChanged != null) {
@@ -667,6 +691,7 @@ class _$_PasswordChanged implements _PasswordChanged {
     required TResult Function() signUp,
     required TResult Function() facebookSignUp,
     required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
   }) {
     return passwordChanged(password);
   }
@@ -681,6 +706,7 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult? Function()? signUp,
     TResult? Function()? facebookSignUp,
     TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
   }) {
     return passwordChanged?.call(password);
   }
@@ -695,6 +721,7 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult Function()? signUp,
     TResult Function()? facebookSignUp,
     TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -713,6 +740,7 @@ class _$_PasswordChanged implements _PasswordChanged {
     required TResult Function(_SignUp value) signUp,
     required TResult Function(_FacebookSignUp value) facebookSignUp,
     required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
   }) {
     return passwordChanged(this);
   }
@@ -727,6 +755,7 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult? Function(_SignUp value)? signUp,
     TResult? Function(_FacebookSignUp value)? facebookSignUp,
     TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
   }) {
     return passwordChanged?.call(this);
   }
@@ -741,6 +770,7 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult Function(_SignUp value)? signUp,
     TResult Function(_FacebookSignUp value)? facebookSignUp,
     TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -802,6 +832,7 @@ class _$_SignUp implements _SignUp {
     required TResult Function() signUp,
     required TResult Function() facebookSignUp,
     required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
   }) {
     return signUp();
   }
@@ -816,6 +847,7 @@ class _$_SignUp implements _SignUp {
     TResult? Function()? signUp,
     TResult? Function()? facebookSignUp,
     TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
   }) {
     return signUp?.call();
   }
@@ -830,6 +862,7 @@ class _$_SignUp implements _SignUp {
     TResult Function()? signUp,
     TResult Function()? facebookSignUp,
     TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
     required TResult orElse(),
   }) {
     if (signUp != null) {
@@ -848,6 +881,7 @@ class _$_SignUp implements _SignUp {
     required TResult Function(_SignUp value) signUp,
     required TResult Function(_FacebookSignUp value) facebookSignUp,
     required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
   }) {
     return signUp(this);
   }
@@ -862,6 +896,7 @@ class _$_SignUp implements _SignUp {
     TResult? Function(_SignUp value)? signUp,
     TResult? Function(_FacebookSignUp value)? facebookSignUp,
     TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
   }) {
     return signUp?.call(this);
   }
@@ -876,6 +911,7 @@ class _$_SignUp implements _SignUp {
     TResult Function(_SignUp value)? signUp,
     TResult Function(_FacebookSignUp value)? facebookSignUp,
     TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
     required TResult orElse(),
   }) {
     if (signUp != null) {
@@ -934,6 +970,7 @@ class _$_FacebookSignUp implements _FacebookSignUp {
     required TResult Function() signUp,
     required TResult Function() facebookSignUp,
     required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
   }) {
     return facebookSignUp();
   }
@@ -948,6 +985,7 @@ class _$_FacebookSignUp implements _FacebookSignUp {
     TResult? Function()? signUp,
     TResult? Function()? facebookSignUp,
     TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
   }) {
     return facebookSignUp?.call();
   }
@@ -962,6 +1000,7 @@ class _$_FacebookSignUp implements _FacebookSignUp {
     TResult Function()? signUp,
     TResult Function()? facebookSignUp,
     TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
     required TResult orElse(),
   }) {
     if (facebookSignUp != null) {
@@ -980,6 +1019,7 @@ class _$_FacebookSignUp implements _FacebookSignUp {
     required TResult Function(_SignUp value) signUp,
     required TResult Function(_FacebookSignUp value) facebookSignUp,
     required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
   }) {
     return facebookSignUp(this);
   }
@@ -994,6 +1034,7 @@ class _$_FacebookSignUp implements _FacebookSignUp {
     TResult? Function(_SignUp value)? signUp,
     TResult? Function(_FacebookSignUp value)? facebookSignUp,
     TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
   }) {
     return facebookSignUp?.call(this);
   }
@@ -1008,6 +1049,7 @@ class _$_FacebookSignUp implements _FacebookSignUp {
     TResult Function(_SignUp value)? signUp,
     TResult Function(_FacebookSignUp value)? facebookSignUp,
     TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
     required TResult orElse(),
   }) {
     if (facebookSignUp != null) {
@@ -1066,6 +1108,7 @@ class _$_GoogleSignUp implements _GoogleSignUp {
     required TResult Function() signUp,
     required TResult Function() facebookSignUp,
     required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
   }) {
     return googleSignUp();
   }
@@ -1080,6 +1123,7 @@ class _$_GoogleSignUp implements _GoogleSignUp {
     TResult? Function()? signUp,
     TResult? Function()? facebookSignUp,
     TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
   }) {
     return googleSignUp?.call();
   }
@@ -1094,6 +1138,7 @@ class _$_GoogleSignUp implements _GoogleSignUp {
     TResult Function()? signUp,
     TResult Function()? facebookSignUp,
     TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
     required TResult orElse(),
   }) {
     if (googleSignUp != null) {
@@ -1112,6 +1157,7 @@ class _$_GoogleSignUp implements _GoogleSignUp {
     required TResult Function(_SignUp value) signUp,
     required TResult Function(_FacebookSignUp value) facebookSignUp,
     required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
   }) {
     return googleSignUp(this);
   }
@@ -1126,6 +1172,7 @@ class _$_GoogleSignUp implements _GoogleSignUp {
     TResult? Function(_SignUp value)? signUp,
     TResult? Function(_FacebookSignUp value)? facebookSignUp,
     TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
   }) {
     return googleSignUp?.call(this);
   }
@@ -1140,6 +1187,7 @@ class _$_GoogleSignUp implements _GoogleSignUp {
     TResult Function(_SignUp value)? signUp,
     TResult Function(_FacebookSignUp value)? facebookSignUp,
     TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
     required TResult orElse(),
   }) {
     if (googleSignUp != null) {
@@ -1151,6 +1199,144 @@ class _$_GoogleSignUp implements _GoogleSignUp {
 
 abstract class _GoogleSignUp implements SignUpEvent {
   const factory _GoogleSignUp() = _$_GoogleSignUp;
+}
+
+/// @nodoc
+abstract class _$$_CloseSnackBarCopyWith<$Res> {
+  factory _$$_CloseSnackBarCopyWith(
+          _$_CloseSnackBar value, $Res Function(_$_CloseSnackBar) then) =
+      __$$_CloseSnackBarCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_CloseSnackBarCopyWithImpl<$Res>
+    extends _$SignUpEventCopyWithImpl<$Res, _$_CloseSnackBar>
+    implements _$$_CloseSnackBarCopyWith<$Res> {
+  __$$_CloseSnackBarCopyWithImpl(
+      _$_CloseSnackBar _value, $Res Function(_$_CloseSnackBar) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_CloseSnackBar implements _CloseSnackBar {
+  const _$_CloseSnackBar();
+
+  @override
+  String toString() {
+    return 'SignUpEvent.closeSnackBar()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_CloseSnackBar);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String lastName) lastNameChanged,
+    required TResult Function(String cellphone) cellphoneChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function() signUp,
+    required TResult Function() facebookSignUp,
+    required TResult Function() googleSignUp,
+    required TResult Function() closeSnackBar,
+  }) {
+    return closeSnackBar();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String lastName)? lastNameChanged,
+    TResult? Function(String cellphone)? cellphoneChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function()? signUp,
+    TResult? Function()? facebookSignUp,
+    TResult? Function()? googleSignUp,
+    TResult? Function()? closeSnackBar,
+  }) {
+    return closeSnackBar?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name)? nameChanged,
+    TResult Function(String lastName)? lastNameChanged,
+    TResult Function(String cellphone)? cellphoneChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? signUp,
+    TResult Function()? facebookSignUp,
+    TResult Function()? googleSignUp,
+    TResult Function()? closeSnackBar,
+    required TResult orElse(),
+  }) {
+    if (closeSnackBar != null) {
+      return closeSnackBar();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_LastNameChanged value) lastNameChanged,
+    required TResult Function(_CellphoneChanged value) cellphoneChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_SignUp value) signUp,
+    required TResult Function(_FacebookSignUp value) facebookSignUp,
+    required TResult Function(_GoogleSignUp value) googleSignUp,
+    required TResult Function(_CloseSnackBar value) closeSnackBar,
+  }) {
+    return closeSnackBar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_LastNameChanged value)? lastNameChanged,
+    TResult? Function(_CellphoneChanged value)? cellphoneChanged,
+    TResult? Function(_PasswordChanged value)? passwordChanged,
+    TResult? Function(_SignUp value)? signUp,
+    TResult? Function(_FacebookSignUp value)? facebookSignUp,
+    TResult? Function(_GoogleSignUp value)? googleSignUp,
+    TResult? Function(_CloseSnackBar value)? closeSnackBar,
+  }) {
+    return closeSnackBar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_LastNameChanged value)? lastNameChanged,
+    TResult Function(_CellphoneChanged value)? cellphoneChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_SignUp value)? signUp,
+    TResult Function(_FacebookSignUp value)? facebookSignUp,
+    TResult Function(_GoogleSignUp value)? googleSignUp,
+    TResult Function(_CloseSnackBar value)? closeSnackBar,
+    required TResult orElse(),
+  }) {
+    if (closeSnackBar != null) {
+      return closeSnackBar(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CloseSnackBar implements SignUpEvent {
+  const factory _CloseSnackBar() = _$_CloseSnackBar;
 }
 
 /// @nodoc

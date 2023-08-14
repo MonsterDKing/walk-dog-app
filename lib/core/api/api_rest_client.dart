@@ -3,19 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
 import 'api_rest_result.dart';
-import 'interceptors/accept_header_interceptor.dart';
 import 'interceptors/authorization_interceptor.dart';
-
-class ApiService {
-  static Dio dio = Dio(BaseOptions(
-    baseUrl: "http://localhost:3000/api/v1/",
-    contentType: Headers.jsonContentType,
-    headers: <String, String>{
-      'Accept': 'application/json',
-    },
-  ))
-    ..interceptors.add(AcceptHeaderInterceptor());
-}
 
 enum HttpMethod { get, put, post, delete, patch }
 
